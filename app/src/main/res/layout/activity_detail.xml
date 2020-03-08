@@ -15,10 +15,11 @@
   limitations under the License.
   -->
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:context="com.example.android.materialme.DetailActivity">
@@ -50,11 +51,23 @@
             android:textColor="?android:textColorSecondary" />
 
         <TextView
+            android:id="@+id/newsTitleDetail2"
+            style="@style/TextAppearance.AppCompat.Subhead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sportsImageDetail"
+            android:layout_marginTop="54dp"
+            android:padding="16dp"
+            android:text="Date: 3/7/2020"
+            android:textColor="?android:textColorSecondary" />
+
+        <TextView
             android:id="@+id/subTitleDetail"
             style="@style/TextAppearance.AppCompat.Subhead"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/newsTitleDetail"
+            android:layout_marginTop="50dp"
             android:padding="16dp"
             android:text="@string/subtitle_detail_text" />
 

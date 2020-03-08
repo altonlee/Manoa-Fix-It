@@ -79,16 +79,16 @@ public final class R {
         public static final int italic = 0x7f090051;
         public static final int line1 = 0x7f090055;
         public static final int line3 = 0x7f090056;
-        public static final int normal = 0x7f090064;
-        public static final int notification_background = 0x7f090065;
-        public static final int notification_main_column = 0x7f090066;
-        public static final int notification_main_column_container = 0x7f090067;
-        public static final int right_icon = 0x7f090073;
-        public static final int right_side = 0x7f090074;
-        public static final int text = 0x7f0900a1;
-        public static final int text2 = 0x7f0900a2;
-        public static final int time = 0x7f0900a8;
-        public static final int title = 0x7f0900a9;
+        public static final int normal = 0x7f090065;
+        public static final int notification_background = 0x7f090066;
+        public static final int notification_main_column = 0x7f090067;
+        public static final int notification_main_column_container = 0x7f090068;
+        public static final int right_icon = 0x7f090074;
+        public static final int right_side = 0x7f090075;
+        public static final int text = 0x7f0900a2;
+        public static final int text2 = 0x7f0900a3;
+        public static final int time = 0x7f0900a9;
+        public static final int title = 0x7f0900aa;
     }
     public static final class integer {
         public static final int status_bar_notification_info_maxnum = 0x7f0a0009;

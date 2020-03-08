@@ -14,21 +14,20 @@
   limitations under the License.
   -->
 <resources>
-    <string name="app_name">Material Me!</string>
+    <string name="app_name">Manoa Fix-It!</string>
     <string name="title_placeholder">Title</string>
-    <string name="news_placeholder">News</string>
+    <string name="news_placeholder">Unresolved</string>
     <string name="sports_info_placeholder">Here is some news</string>
-    <string name="subtitle_detail_text">Lorem ipsum dolor sit amet,
-        consectetur adipiscing elit. Praesent ultrices congue rutrum.
-        Phasellus elementum ipsum ac convallis aliquam. Suspendisse eleifend
-        eros a enim faucibus mollis. Nunc placerat, est vitae vestibulum
-        blandit, dolor diam fringilla tellus, eu euismod mauris neque
-        at neque.</string>
+    <string name="subtitle_detail_text">The ICSpace printer has
+        been out of order for the past two months. As the only
+        convenient and accessible printer for ICS students,
+        it is important that this printer is functional as soon as
+        possible. </string>
 
     <string-array name="sports_titles">
-        <item>Baseball</item>
-        <item>Badminton</item>
-        <item>Basketball</item>
+        <item>Kuykendall Bathrooms</item>
+        <item>POST ICSpace Printer</item>
+        <item>WRC Broken Treadmills</item>
         <item>Bowling</item>
         <item>Cycling</item>
         <item>Golf</item>
@@ -40,9 +39,9 @@
     </string-array>
 
     <string-array name="sports_info">
-        <item>Here is some Baseball news!</item>
-        <item>Here is some Badminton news!</item>
-        <item>Here is some Basketball news!</item>
+        <item>The mens mathrooms never have any toilet paper. </item>
+        <item>The ICSpace printer has been out of order for the past two months.</item>
+        <item>If theyre broken, shouldnt they be removed?</item>
         <item>Here is some Bowling news!</item>
         <item>Here is some Cycling news!</item>
         <item>Here is some Golf news!</item>
