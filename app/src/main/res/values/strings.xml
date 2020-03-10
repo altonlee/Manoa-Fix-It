@@ -24,6 +24,8 @@
         it is important that this printer is functional as soon as
         possible. </string>
 
+    <string name="name_label_text"></string>
+
     <string-array name="sports_titles">
         <item>Kuykendall Bathrooms</item>
         <item>POST ICSpace Printer</item>
@@ -52,6 +54,48 @@
         <item>Here is some Tennis news!</item>
     </string-array>
 
+    <string-array name="issue_status">
+        <item>Unresolved</item>
+        <item>Resolved</item>
+        <item>Pending</item>
+        <item>Unresolved</item>
+        <item>Unresolved</item>
+        <item>Unresolved</item>
+        <item>Unresolved</item>
+        <item>Unresolved</item>
+        <item>Unresolved</item>
+        <item>Unresolved</item>
+        <item>Unresolved</item>
+    </string-array>
+
+    <string-array name="issue_date">
+        <item>Tue Mar 3 2020 01:39:55 GMT-1000</item>
+        <item>Wed Mar 4 2020 11:39:00 GMT-1000</item>
+        <item>Tue Mar 10 2020 6:44:23 GMT-1000</item>
+        <item>Tue Mar 10 2020 6:44:23 GMT-1000</item>
+        <item>Tue Mar 10 2020 6:44:23 GMT-1000</item>
+        <item>Tue Mar 10 2020 6:44:23 GMT-1000</item>
+        <item>Tue Mar 10 2020 6:44:23 GMT-1000</item>
+        <item>Tue Mar 10 2020 6:44:23 GMT-1000</item>
+        <item>Tue Mar 10 2020 6:44:23 GMT-1000</item>
+        <item>Tue Mar 10 2020 6:44:23 GMT-1000</item>
+        <item>Tue Mar 10 2020 6:44:23 GMT-1000</item>
+    </string-array>
+
+    <string-array name="issue_loc">
+        <item>Kuykendall Building</item>
+        <item>POST Building</item>
+        <item>Campus Center</item>
+        <item>Undefined</item>
+        <item>Undefined</item>
+        <item>Undefined</item>
+        <item>Undefined</item>
+        <item>Undefined</item>
+        <item>Undefined</item>
+        <item>Undefined</item>
+        <item>Undefined</item>
+    </string-array>
+
 
     <array name="sports_images">
         <item>@drawable/img_baseball</item>
@@ -65,7 +109,6 @@
         <item>@drawable/img_swimming</item>
         <item>@drawable/img_tabletennis</item>
         <item>@drawable/img_tennis</item>
-
     </array>
 
 

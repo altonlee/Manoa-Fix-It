@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml:16:1-35:12
-INJECTED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml:16:1-35:12
-INJECTED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml:16:1-35:12
-INJECTED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml:16:1-35:12
+ADDED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml:16:1-36:12
+INJECTED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml:16:1-36:12
+INJECTED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml:16:1-36:12
+INJECTED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml:16:1-36:12
 MERGED from [com.android.support:design:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\c3e7aa71f17c221f70ceb243b862472c\AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\da8c6069ebe3ec08f70592217926cc8c\AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\f35368583424d7bdce0dc61bcd246f30\AndroidManifest.xml:17:1-28:12
@@ -19,25 +19,25 @@ MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\theni\.gr
 MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\669839a58f67079ef4e9058200823e64\AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:support-compat:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\57301bec71b02f1823ad5e81cacfdec4\AndroidManifest.xml:17:1-31:12
 MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\60a64eee66634d3127746db773e899c4\AndroidManifest.xml:17:1-30:12
-INJECTED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml:16:1-35:12
-INJECTED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml:16:1-35:12
-INJECTED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml:16:1-35:12
+INJECTED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml:16:1-36:12
+INJECTED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml:16:1-36:12
+INJECTED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml:16:1-36:12
 	package
 		ADDED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml:17:5-45
 		INJECTED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml:16:1-35:12
+		ADDED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml:16:1-36:12
 		INJECTED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml:16:1-35:12
+		ADDED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml:16:1-36:12
 		INJECTED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml:16:11-69
 application
-ADDED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml:19:5-33:19
+ADDED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml:19:5-34:19
 MERGED from [com.android.support:design:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\c3e7aa71f17c221f70ceb243b862472c\AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:design:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\c3e7aa71f17c221f70ceb243b862472c\AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\da8c6069ebe3ec08f70592217926cc8c\AndroidManifest.xml:25:5-29:19
@@ -96,6 +96,10 @@ activity#com.example.android.materialme.DetailActivity
 ADDED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml:32:9-61
 	android:name
 		ADDED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml:32:19-49
+activity#com.example.android.materialme.AddActivity
+ADDED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml:33:9-58
+	android:name
+		ADDED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml:33:19-46
 uses-sdk
 INJECTED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml

@@ -16,13 +16,16 @@
 
 package com.example.android.materialme;
 
+import android.content.Intent;
 import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.support.v7.widget.helper.ItemTouchHelper;
 import android.view.View;
+import android.widget.Button;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -145,4 +148,9 @@ public class MainActivity extends AppCompatActivity {
     public void resetSports(View view) {
         initializeData();
     }
+
+    public void addIssue(View view) {
+        startActivity(new Intent(MainActivity.this, AddActivity.class));
+    }
+
 }
