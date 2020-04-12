@@ -1,184 +1,187 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml:16:1-36:12
-INJECTED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml:16:1-36:12
-INJECTED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml:16:1-36:12
-INJECTED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml:16:1-36:12
-MERGED from [com.android.support:design:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\c3e7aa71f17c221f70ceb243b862472c\AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\da8c6069ebe3ec08f70592217926cc8c\AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\f35368583424d7bdce0dc61bcd246f30\AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\35ea9ee9d466ee40fe6c856a0174e84a\AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\c9eb427ff1cc2f99d121a7043d777746\AndroidManifest.xml:2:1-11:12
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\3056392e2a2acbb9b89b75d7ef0384e3\AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\46cc17b7fe197ece912d1bfc131b40ff\AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:transition:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\8c901e0b9f294986facfedda2fdb1d17\AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:support-v4:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\dd581b6bc939a5a57b703fa6ba59f387\AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\73aba3dd8f7e8d14badccb04aaea2c20\AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\912d2416cc76628f55e823c4ae5d2e69\AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\e57144c0fe140be0c602dd438561442f\AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\669839a58f67079ef4e9058200823e64\AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-compat:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\57301bec71b02f1823ad5e81cacfdec4\AndroidManifest.xml:17:1-31:12
-MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\60a64eee66634d3127746db773e899c4\AndroidManifest.xml:17:1-30:12
-INJECTED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml:16:1-36:12
-INJECTED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml:16:1-36:12
-INJECTED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml:16:1-36:12
+ADDED from C:\Users\theni\Documents\ManoaFixIt\app\src\main\AndroidManifest.xml:2:1-28:12
+INJECTED from C:\Users\theni\Documents\ManoaFixIt\app\src\main\AndroidManifest.xml:2:1-28:12
+INJECTED from C:\Users\theni\Documents\ManoaFixIt\app\src\main\AndroidManifest.xml:2:1-28:12
+INJECTED from C:\Users\theni\Documents\ManoaFixIt\app\src\main\AndroidManifest.xml:2:1-28:12
+MERGED from [androidx.navigation:navigation-ui:2.2.1] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\80320c9ad43d0eaf60f4e36bc4d98035\navigation-ui-2.2.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.material:material:1.1.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\c6c160beabe7f4f404dcf7d40c9cb143\material-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\f7fa931c10060cb31b4ececcd856b65d\appcompat-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\75fe1a0d0ea641341446dfd6b8974e96\constraintlayout-1.1.3\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.navigation:navigation-fragment:2.2.1] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\f2ec78e29b16ce34c7c17a288c4ca746\navigation-fragment-2.2.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\850a3c84da944cc872764513edcd7120\jetified-appcompat-resources-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\cb2cdf934d3d3e0441b52d1dc3cb2e6a\drawerlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\1ebdab2cccca905a3cd28bb608703327\coordinatorlayout-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\82145ca6b286991b875747484a22969a\transition-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\14bfd2f44a1567c658112bb55b76246b\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\f543223d8dd1217edab7f57e00d5e19d\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\f5f514aefab3bab424b829f9c5a8fd3e\jetified-viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.fragment:fragment:1.2.1] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\75260baf5315c6e1f2dbb176a6b1c826\fragment-1.2.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\cff0d1b30776eaeafd152d3c76e2da6a\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\ad12b5d47f95c8d2598703c1b1f7c267\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\223ae8e78f23f48ba5d96a1dcabe1834\customview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\495dc0f2fa247d616fe68db13bf5e07d\loader-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-runtime:2.2.1] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\821d0a5f89758cdad69b9a7d3d8fbf1a\navigation-runtime-2.2.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity:1.1.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\d76bdbfbc13c44ef68b61971d9cabdc1\jetified-activity-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-common:2.2.1] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\0b9192d5f9bf1a4583c66b3e04d8cff4\navigation-common-2.2.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core:1.1.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\1cd7eff88f5e86d0249af2958bf465f0\core-1.1.0\AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\aace0d5da73d2c817f12bb96d6698e5c\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\7d7fd0d2929b90b96150578fa61b2794\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\929ec10604c047a76453df3294ada6ae\versionedparcelable-1.1.0\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\461d9531b975133f35ee99aea753bbf4\jetified-lifecycle-viewmodel-savedstate-2.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\58c998a8d598710a020fa02806449a4b\lifecycle-viewmodel-2.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\80494d026c905f06e4c8b45b3569cb2d\jetified-savedstate-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\c4e2469658fdd8801a5306110b0915fc\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\f665b073cb211160618c2d140b8a2bec\lifecycle-runtime-2.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\54ec9a60a0f20829d9c5323f1ce0908c\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\becbcdb90dd6658fa9922119d9ed69f9\lifecycle-livedata-core-2.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\1cfd2abfffba474819c6ba886bdc15c5\core-runtime-2.1.0\AndroidManifest.xml:17:1-24:12
+INJECTED from C:\Users\theni\Documents\ManoaFixIt\app\src\main\AndroidManifest.xml:2:1-28:12
+INJECTED from C:\Users\theni\Documents\ManoaFixIt\app\src\main\AndroidManifest.xml:2:1-28:12
+INJECTED from C:\Users\theni\Documents\ManoaFixIt\app\src\main\AndroidManifest.xml:2:1-28:12
 	package
-		ADDED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml:17:5-45
-		INJECTED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\theni\Documents\ManoaFixIt\app\src\main\AndroidManifest.xml:3:5-39
+		INJECTED from C:\Users\theni\Documents\ManoaFixIt\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\theni\Documents\ManoaFixIt\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml:16:1-36:12
-		INJECTED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\theni\Documents\ManoaFixIt\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\theni\Documents\ManoaFixIt\app\src\main\AndroidManifest.xml:2:1-28:12
+		INJECTED from C:\Users\theni\Documents\ManoaFixIt\app\src\main\AndroidManifest.xml
 	android:versionCode
-		INJECTED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml:16:1-36:12
-		INJECTED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\theni\Documents\ManoaFixIt\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\theni\Documents\ManoaFixIt\app\src\main\AndroidManifest.xml:2:1-28:12
+		INJECTED from C:\Users\theni\Documents\ManoaFixIt\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml:16:11-69
+		ADDED from C:\Users\theni\Documents\ManoaFixIt\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml:19:5-34:19
-MERGED from [com.android.support:design:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\c3e7aa71f17c221f70ceb243b862472c\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:design:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\c3e7aa71f17c221f70ceb243b862472c\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\da8c6069ebe3ec08f70592217926cc8c\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\da8c6069ebe3ec08f70592217926cc8c\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\f35368583424d7bdce0dc61bcd246f30\AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\f35368583424d7bdce0dc61bcd246f30\AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\35ea9ee9d466ee40fe6c856a0174e84a\AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\35ea9ee9d466ee40fe6c856a0174e84a\AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\c9eb427ff1cc2f99d121a7043d777746\AndroidManifest.xml:9:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\c9eb427ff1cc2f99d121a7043d777746\AndroidManifest.xml:9:5-20
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\3056392e2a2acbb9b89b75d7ef0384e3\AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\3056392e2a2acbb9b89b75d7ef0384e3\AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\46cc17b7fe197ece912d1bfc131b40ff\AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\46cc17b7fe197ece912d1bfc131b40ff\AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:transition:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\8c901e0b9f294986facfedda2fdb1d17\AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:transition:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\8c901e0b9f294986facfedda2fdb1d17\AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:support-v4:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\dd581b6bc939a5a57b703fa6ba59f387\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-v4:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\dd581b6bc939a5a57b703fa6ba59f387\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\73aba3dd8f7e8d14badccb04aaea2c20\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\73aba3dd8f7e8d14badccb04aaea2c20\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\912d2416cc76628f55e823c4ae5d2e69\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\912d2416cc76628f55e823c4ae5d2e69\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\e57144c0fe140be0c602dd438561442f\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\e57144c0fe140be0c602dd438561442f\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\669839a58f67079ef4e9058200823e64\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\669839a58f67079ef4e9058200823e64\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-compat:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\57301bec71b02f1823ad5e81cacfdec4\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-compat:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\57301bec71b02f1823ad5e81cacfdec4\AndroidManifest.xml:25:5-29:19
-MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\60a64eee66634d3127746db773e899c4\AndroidManifest.xml:24:5-28:19
-MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\60a64eee66634d3127746db773e899c4\AndroidManifest.xml:24:5-28:19
+ADDED from C:\Users\theni\Documents\ManoaFixIt\app\src\main\AndroidManifest.xml:5:5-26:19
+MERGED from [com.google.android.material:material:1.1.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\c6c160beabe7f4f404dcf7d40c9cb143\material-1.1.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.1.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\c6c160beabe7f4f404dcf7d40c9cb143\material-1.1.0\AndroidManifest.xml:22:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\75fe1a0d0ea641341446dfd6b8974e96\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\75fe1a0d0ea641341446dfd6b8974e96\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
+MERGED from [androidx.core:core:1.1.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\1cd7eff88f5e86d0249af2958bf465f0\core-1.1.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.1.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\1cd7eff88f5e86d0249af2958bf465f0\core-1.1.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\929ec10604c047a76453df3294ada6ae\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\929ec10604c047a76453df3294ada6ae\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.1.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\1cd7eff88f5e86d0249af2958bf465f0\core-1.1.0\AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml:23:9-35
+		ADDED from C:\Users\theni\Documents\ManoaFixIt\app\src\main\AndroidManifest.xml:10:9-35
 	android:label
-		ADDED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml:22:9-41
+		ADDED from C:\Users\theni\Documents\ManoaFixIt\app\src\main\AndroidManifest.xml:8:9-41
+	android:roundIcon
+		ADDED from C:\Users\theni\Documents\ManoaFixIt\app\src\main\AndroidManifest.xml:9:9-54
 	android:icon
-		ADDED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml:21:9-43
+		ADDED from C:\Users\theni\Documents\ManoaFixIt\app\src\main\AndroidManifest.xml:7:9-43
 	android:allowBackup
-		ADDED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml:20:9-35
+		ADDED from C:\Users\theni\Documents\ManoaFixIt\app\src\main\AndroidManifest.xml:6:9-35
 	android:theme
-		ADDED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml:24:9-40
-activity#com.example.android.materialme.MainActivity
-ADDED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml:25:9-31:20
+		ADDED from C:\Users\theni\Documents\ManoaFixIt\app\src\main\AndroidManifest.xml:11:9-40
+activity#com.example.manoa_fix_it.MainActivity
+ADDED from C:\Users\theni\Documents\ManoaFixIt\app\src\main\AndroidManifest.xml:12:9-21:20
+	android:label
+		ADDED from C:\Users\theni\Documents\ManoaFixIt\app\src\main\AndroidManifest.xml:14:13-45
+	android:theme
+		ADDED from C:\Users\theni\Documents\ManoaFixIt\app\src\main\AndroidManifest.xml:15:13-56
 	android:name
-		ADDED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml:25:19-47
-intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml:26:13-30:29
+		ADDED from C:\Users\theni\Documents\ManoaFixIt\app\src\main\AndroidManifest.xml:13:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\theni\Documents\ManoaFixIt\app\src\main\AndroidManifest.xml:16:13-20:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml:27:17-69
+ADDED from C:\Users\theni\Documents\ManoaFixIt\app\src\main\AndroidManifest.xml:17:17-69
 	android:name
-		ADDED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml:27:25-66
+		ADDED from C:\Users\theni\Documents\ManoaFixIt\app\src\main\AndroidManifest.xml:17:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml:29:17-77
+ADDED from C:\Users\theni\Documents\ManoaFixIt\app\src\main\AndroidManifest.xml:19:17-77
 	android:name
-		ADDED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml:29:27-74
-activity#com.example.android.materialme.DetailActivity
-ADDED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml:32:9-61
+		ADDED from C:\Users\theni\Documents\ManoaFixIt\app\src\main\AndroidManifest.xml:19:27-74
+activity#com.example.manoa_fix_it.IssueActivity
+ADDED from C:\Users\theni\Documents\ManoaFixIt\app\src\main\AndroidManifest.xml:22:9-23:57
+	android:parentActivityName
+		ADDED from C:\Users\theni\Documents\ManoaFixIt\app\src\main\AndroidManifest.xml:23:13-55
 	android:name
-		ADDED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml:32:19-49
-activity#com.example.android.materialme.AddActivity
-ADDED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml:33:9-58
+		ADDED from C:\Users\theni\Documents\ManoaFixIt\app\src\main\AndroidManifest.xml:22:19-48
+activity#com.example.manoa_fix_it.AddActivity
+ADDED from C:\Users\theni\Documents\ManoaFixIt\app\src\main\AndroidManifest.xml:24:9-25:57
+	android:parentActivityName
+		ADDED from C:\Users\theni\Documents\ManoaFixIt\app\src\main\AndroidManifest.xml:25:13-55
 	android:name
-		ADDED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml:33:19-46
+		ADDED from C:\Users\theni\Documents\ManoaFixIt\app\src\main\AndroidManifest.xml:24:19-46
 uses-sdk
-INJECTED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml
-MERGED from [com.android.support:design:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\c3e7aa71f17c221f70ceb243b862472c\AndroidManifest.xml:21:5-23:62
-MERGED from [com.android.support:design:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\c3e7aa71f17c221f70ceb243b862472c\AndroidManifest.xml:21:5-23:62
-MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\da8c6069ebe3ec08f70592217926cc8c\AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\da8c6069ebe3ec08f70592217926cc8c\AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\f35368583424d7bdce0dc61bcd246f30\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\f35368583424d7bdce0dc61bcd246f30\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\35ea9ee9d466ee40fe6c856a0174e84a\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\35ea9ee9d466ee40fe6c856a0174e84a\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\c9eb427ff1cc2f99d121a7043d777746\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\c9eb427ff1cc2f99d121a7043d777746\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\3056392e2a2acbb9b89b75d7ef0384e3\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\3056392e2a2acbb9b89b75d7ef0384e3\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\46cc17b7fe197ece912d1bfc131b40ff\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\46cc17b7fe197ece912d1bfc131b40ff\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\8c901e0b9f294986facfedda2fdb1d17\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\8c901e0b9f294986facfedda2fdb1d17\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\dd581b6bc939a5a57b703fa6ba59f387\AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-v4:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\dd581b6bc939a5a57b703fa6ba59f387\AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\73aba3dd8f7e8d14badccb04aaea2c20\AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\73aba3dd8f7e8d14badccb04aaea2c20\AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\912d2416cc76628f55e823c4ae5d2e69\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\912d2416cc76628f55e823c4ae5d2e69\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\e57144c0fe140be0c602dd438561442f\AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\e57144c0fe140be0c602dd438561442f\AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\669839a58f67079ef4e9058200823e64\AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\669839a58f67079ef4e9058200823e64\AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-compat:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\57301bec71b02f1823ad5e81cacfdec4\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-compat:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\57301bec71b02f1823ad5e81cacfdec4\AndroidManifest.xml:21:5-23:58
-MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\60a64eee66634d3127746db773e899c4\AndroidManifest.xml:20:5-22:41
-MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\60a64eee66634d3127746db773e899c4\AndroidManifest.xml:20:5-22:41
-INJECTED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml
-	tools:overrideLibrary
-		ADDED from [com.android.support:design:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\c3e7aa71f17c221f70ceb243b862472c\AndroidManifest.xml:23:9-59
+INJECTED from C:\Users\theni\Documents\ManoaFixIt\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\theni\Documents\ManoaFixIt\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\theni\Documents\ManoaFixIt\app\src\main\AndroidManifest.xml
+MERGED from [androidx.navigation:navigation-ui:2.2.1] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\80320c9ad43d0eaf60f4e36bc4d98035\navigation-ui-2.2.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-ui:2.2.1] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\80320c9ad43d0eaf60f4e36bc4d98035\navigation-ui-2.2.1\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.material:material:1.1.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\c6c160beabe7f4f404dcf7d40c9cb143\material-1.1.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.1.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\c6c160beabe7f4f404dcf7d40c9cb143\material-1.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\f7fa931c10060cb31b4ececcd856b65d\appcompat-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\f7fa931c10060cb31b4ececcd856b65d\appcompat-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\75fe1a0d0ea641341446dfd6b8974e96\constraintlayout-1.1.3\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\75fe1a0d0ea641341446dfd6b8974e96\constraintlayout-1.1.3\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.navigation:navigation-fragment:2.2.1] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\f2ec78e29b16ce34c7c17a288c4ca746\navigation-fragment-2.2.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-fragment:2.2.1] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\f2ec78e29b16ce34c7c17a288c4ca746\navigation-fragment-2.2.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\850a3c84da944cc872764513edcd7120\jetified-appcompat-resources-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\850a3c84da944cc872764513edcd7120\jetified-appcompat-resources-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\cb2cdf934d3d3e0441b52d1dc3cb2e6a\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\cb2cdf934d3d3e0441b52d1dc3cb2e6a\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\1ebdab2cccca905a3cd28bb608703327\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\1ebdab2cccca905a3cd28bb608703327\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\82145ca6b286991b875747484a22969a\transition-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\82145ca6b286991b875747484a22969a\transition-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\14bfd2f44a1567c658112bb55b76246b\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\14bfd2f44a1567c658112bb55b76246b\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\f543223d8dd1217edab7f57e00d5e19d\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\f543223d8dd1217edab7f57e00d5e19d\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\f5f514aefab3bab424b829f9c5a8fd3e\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\f5f514aefab3bab424b829f9c5a8fd3e\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.2.1] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\75260baf5315c6e1f2dbb176a6b1c826\fragment-1.2.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.2.1] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\75260baf5315c6e1f2dbb176a6b1c826\fragment-1.2.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\cff0d1b30776eaeafd152d3c76e2da6a\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\cff0d1b30776eaeafd152d3c76e2da6a\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\ad12b5d47f95c8d2598703c1b1f7c267\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\ad12b5d47f95c8d2598703c1b1f7c267\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\223ae8e78f23f48ba5d96a1dcabe1834\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\223ae8e78f23f48ba5d96a1dcabe1834\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\495dc0f2fa247d616fe68db13bf5e07d\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\495dc0f2fa247d616fe68db13bf5e07d\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-runtime:2.2.1] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\821d0a5f89758cdad69b9a7d3d8fbf1a\navigation-runtime-2.2.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-runtime:2.2.1] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\821d0a5f89758cdad69b9a7d3d8fbf1a\navigation-runtime-2.2.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.1.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\d76bdbfbc13c44ef68b61971d9cabdc1\jetified-activity-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.1.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\d76bdbfbc13c44ef68b61971d9cabdc1\jetified-activity-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-common:2.2.1] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\0b9192d5f9bf1a4583c66b3e04d8cff4\navigation-common-2.2.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-common:2.2.1] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\0b9192d5f9bf1a4583c66b3e04d8cff4\navigation-common-2.2.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.1.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\1cd7eff88f5e86d0249af2958bf465f0\core-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.1.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\1cd7eff88f5e86d0249af2958bf465f0\core-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\aace0d5da73d2c817f12bb96d6698e5c\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\aace0d5da73d2c817f12bb96d6698e5c\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\7d7fd0d2929b90b96150578fa61b2794\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\7d7fd0d2929b90b96150578fa61b2794\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\929ec10604c047a76453df3294ada6ae\versionedparcelable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\929ec10604c047a76453df3294ada6ae\versionedparcelable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\461d9531b975133f35ee99aea753bbf4\jetified-lifecycle-viewmodel-savedstate-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\461d9531b975133f35ee99aea753bbf4\jetified-lifecycle-viewmodel-savedstate-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\58c998a8d598710a020fa02806449a4b\lifecycle-viewmodel-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\58c998a8d598710a020fa02806449a4b\lifecycle-viewmodel-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\80494d026c905f06e4c8b45b3569cb2d\jetified-savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\80494d026c905f06e4c8b45b3569cb2d\jetified-savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\c4e2469658fdd8801a5306110b0915fc\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\c4e2469658fdd8801a5306110b0915fc\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\f665b073cb211160618c2d140b8a2bec\lifecycle-runtime-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\f665b073cb211160618c2d140b8a2bec\lifecycle-runtime-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\54ec9a60a0f20829d9c5323f1ce0908c\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\54ec9a60a0f20829d9c5323f1ce0908c\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\becbcdb90dd6658fa9922119d9ed69f9\lifecycle-livedata-core-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\becbcdb90dd6658fa9922119d9ed69f9\lifecycle-livedata-core-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\1cfd2abfffba474819c6ba886bdc15c5\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\theni\.gradle\caches\transforms-2\files-2.1\1cfd2abfffba474819c6ba886bdc15c5\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
+INJECTED from C:\Users\theni\Documents\ManoaFixIt\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\theni\Documents\ManoaFixIt\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\theni\Documents\ManoaFixIt\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\theni\Documents\ManoaFixIt\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\theni\Documents\ManoaFixIt\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\theni\Documents\GitHub\Manoa-Fix-It\app\src\main\AndroidManifest.xml
-meta-data#android.support.VERSION
-ADDED from [com.android.support:design:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\c3e7aa71f17c221f70ceb243b862472c\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\da8c6069ebe3ec08f70592217926cc8c\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\da8c6069ebe3ec08f70592217926cc8c\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\f35368583424d7bdce0dc61bcd246f30\AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\f35368583424d7bdce0dc61bcd246f30\AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\35ea9ee9d466ee40fe6c856a0174e84a\AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\35ea9ee9d466ee40fe6c856a0174e84a\AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\3056392e2a2acbb9b89b75d7ef0384e3\AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\3056392e2a2acbb9b89b75d7ef0384e3\AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\46cc17b7fe197ece912d1bfc131b40ff\AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\46cc17b7fe197ece912d1bfc131b40ff\AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:transition:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\8c901e0b9f294986facfedda2fdb1d17\AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:transition:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\8c901e0b9f294986facfedda2fdb1d17\AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:support-v4:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\dd581b6bc939a5a57b703fa6ba59f387\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-v4:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\dd581b6bc939a5a57b703fa6ba59f387\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\73aba3dd8f7e8d14badccb04aaea2c20\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\73aba3dd8f7e8d14badccb04aaea2c20\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\912d2416cc76628f55e823c4ae5d2e69\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\912d2416cc76628f55e823c4ae5d2e69\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\e57144c0fe140be0c602dd438561442f\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\e57144c0fe140be0c602dd438561442f\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\669839a58f67079ef4e9058200823e64\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\669839a58f67079ef4e9058200823e64\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-compat:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\57301bec71b02f1823ad5e81cacfdec4\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-compat:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\57301bec71b02f1823ad5e81cacfdec4\AndroidManifest.xml:26:9-28:38
-	android:value
-		ADDED from [com.android.support:design:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\c3e7aa71f17c221f70ceb243b862472c\AndroidManifest.xml:28:13-35
-	android:name
-		ADDED from [com.android.support:design:26.1.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\c3e7aa71f17c221f70ceb243b862472c\AndroidManifest.xml:27:13-51
-meta-data#android.arch.lifecycle.VERSION
-ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\60a64eee66634d3127746db773e899c4\AndroidManifest.xml:25:9-27:47
-	android:value
-		ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\60a64eee66634d3127746db773e899c4\AndroidManifest.xml:27:13-44
-	android:name
-		ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\theni\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\60a64eee66634d3127746db773e899c4\AndroidManifest.xml:26:13-58
+		INJECTED from C:\Users\theni\Documents\ManoaFixIt\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\theni\Documents\ManoaFixIt\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\theni\Documents\ManoaFixIt\app\src\main\AndroidManifest.xml
