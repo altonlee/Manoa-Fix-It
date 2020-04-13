@@ -1,6 +1,16 @@
 package com.example.manoa_fix_it;
 
+import androidx.annotation.NonNull;
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+@Entity(tableName = "issue_table")
 public class Issue {
+    // Annotations
+    @PrimaryKey
+    @NonNull
+    @ColumnInfo(name = "issue")
     // Member variables represent title and details of issue
     private String title;
     private String status;

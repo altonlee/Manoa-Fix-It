@@ -11,11 +11,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class IssuesAdapter extends RecyclerView.Adapter<IssuesAdapter.ViewHolder> {
     // Member variables
-    private ArrayList<Issue> issueData;
+    private List<Issue> issueData;
     private Context context;
 
     /**
@@ -23,7 +23,7 @@ public class IssuesAdapter extends RecyclerView.Adapter<IssuesAdapter.ViewHolder
      * @param issueData: an ArrayList containing the issues.
      * @param context: Context of the application.
      */
-    IssuesAdapter(Context context, ArrayList<Issue> issueData) {
+    IssuesAdapter(Context context, List<Issue> issueData) {
         this.issueData = issueData;
         this.context = context;
     }
@@ -50,6 +50,11 @@ public class IssuesAdapter extends RecyclerView.Adapter<IssuesAdapter.ViewHolder
         Issue curr = issueData.get(pos);
         // populate textview with issue data
         holder.bindTo(curr);
+    }
+
+    void setIssues(List<Issue> words){
+        issueData = words;
+        notifyDataSetChanged();
     }
 
     /**

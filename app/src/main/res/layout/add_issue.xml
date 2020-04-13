@@ -3,9 +3,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <ImageView
-        android:id="@+id/add_image"
+        android:id="@+id/image_placeholder"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingBottom="20dp"
         android:adjustViewBounds="true"
         android:contentDescription="@string/form_image" />
 
@@ -13,7 +14,7 @@
         android:id="@+id/title_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/add_image"
+        android:layout_below="@id/image_placeholder"
         android:padding="12dp"
         android:text="@string/form_title"
         android:textSize="18sp" />
@@ -24,10 +25,10 @@
         android:layout_height="wrap_content"
         android:layout_toEndOf="@id/title_label"
         android:layout_toRightOf="@id/title_label"
+        android:layout_below="@id/image_placeholder"
         android:hint="@string/form_title_hint"
         android:inputType="text"
-        android:padding="12dp"
-        android:text="@string/form_title" />
+        android:padding="12dp"/>
 
     <TextView
         android:id="@+id/loc_label"
@@ -47,8 +48,7 @@
         android:layout_toRightOf="@id/loc_label"
         android:hint="@string/form_loc_hint"
         android:inputType="text"
-        android:padding="12dp"
-        android:text="@string/form_loc" />
+        android:padding="12dp" />
 
     <TextView
         android:id="@+id/date_label"
@@ -68,8 +68,7 @@
         android:layout_toRightOf="@id/date_label"
         android:hint="@string/form_date_hint"
         android:inputType="date"
-        android:padding="12dp"
-        android:text="@string/form_date" />
+        android:padding="12dp" />
 
     <TextView
         android:id="@+id/info_label"
@@ -89,8 +88,7 @@
         android:layout_toRightOf="@id/info_label"
         android:hint="@string/form_info_hint"
         android:inputType="textMultiLine"
-        android:padding="12dp"
-        android:text="@string/form_info" />
+        android:padding="12dp" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/submit"

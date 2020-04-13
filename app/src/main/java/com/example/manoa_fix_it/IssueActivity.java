@@ -29,6 +29,7 @@ public class IssueActivity extends AppCompatActivity {
         TextView status = findViewById(R.id.statusDetail);
         TextView date = findViewById(R.id.dateDetail);
         TextView info = findViewById(R.id.infoDetail);
+
         // Set data into Intent extra
         status.setText(getIntent().getStringExtra("status"));
         date.setText(getIntent().getStringExtra("date"));

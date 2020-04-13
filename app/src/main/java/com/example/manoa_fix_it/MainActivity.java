@@ -4,11 +4,13 @@ import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
-import android.content.res.TypedArray;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.ItemTouchHelper;
 
@@ -17,12 +19,14 @@ import android.view.Menu;
 import android.view.MenuItem;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     // Member variables
     private RecyclerView recyclerView;
-    private ArrayList<Issue> issueData;
+    private List<Issue> issueData;
     private IssuesAdapter issuesAdapter;
+    private IssueViewModel mIssueViewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,23 +35,34 @@ public class MainActivity extends AppCompatActivity {
         // Initialize toolbar
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
         // Initialize FAB
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, AddActivity.class));
+                Intent intent = new Intent(MainActivity.this, AddActivity.class);
+                startActivityForResult(intent, 1);
             }
         });
+
         //Initialize RecyclerView
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
         // Initialize adapter with data
-        issueData = new ArrayList<>();
+        issueData = new ArrayList<Issue>();
         issuesAdapter = new IssuesAdapter(this, issueData);
         recyclerView.setAdapter(issuesAdapter);
-        // Get data
-        initializeData();
+
+        // Initialize IssueViewModel
+        mIssueViewModel = ViewModelProviders.of(this).get(IssueViewModel.class);
+        mIssueViewModel.getAllIssues().observe(this, new Observer<List<Issue>>() {
+            @Override
+            public void onChanged(@Nullable final List<Issue> issues) {
+                issuesAdapter.setIssues(issues);
+            }
+        });
 
         // Helper class for creating swipe to dismiss and drag and drop
         // functionality.
@@ -123,23 +138,12 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    /**
-     * Initialize the issue data from XML resources
-     */
-    private void initializeData() {
-        // Get resources from XML file
-        String[] issuesList = getResources().getStringArray(R.array.issue_titles);
-        String[] statusList = getResources().getStringArray(R.array.issue_statuses);
-        String[] datesList = getResources().getStringArray(R.array.issue_dates);
-        String[] issuesInfo = getResources().getStringArray(R.array.issue_info);
-        TypedArray issuesImage = getResources().obtainTypedArray(R.array.issue_images);
-        // Clear existing data to avoid duplication
-        issueData.clear();
-        // Create ArrayList of Issue objs with its respective details
-        for (int i = 0; i < issuesList.length; i++)
-            issueData.add(new Issue(issuesList[i], statusList[i], datesList[i], issuesInfo[i], issuesImage.getResourceId(i, 0)));
-        // Recycle the typed array
-        issuesImage.recycle();
-        issuesAdapter.notifyDataSetChanged();
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == 1 && resultCode == RESULT_OK) {
+            Issue issue = new Issue(data.getStringExtra("title"), "Unresolved", data.getStringExtra("date"), data.getStringExtra("info"), 0);
+            mIssueViewModel.insert(issue);
+        }
     }
 }
