@@ -27,23 +27,43 @@ import android.support.v7.widget.helper.ItemTouchHelper;
 import android.view.View;
 import android.widget.Button;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
-/***
- * Main Activity for the Material Me app, a mock sports news application.
- */
 public class MainActivity extends AppCompatActivity {
 
     // Member variables.
     private RecyclerView mRecyclerView;
-    private ArrayList<Sport> mSportsData;
-    private SportsAdapter mAdapter;
+    private ArrayList<Issue> mIssueData;
+    private IssuesAdapter mAdapter;
+
+    private ArrayList<String> titleList = new ArrayList<>();
+    private ArrayList<String> descriptionList = new ArrayList<>();
+    private ArrayList<String> locationList = new ArrayList<>();
+    private ArrayList<String> dateList = new ArrayList<>();
+    private ArrayList<String> imageList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Intent intent = getIntent();
+
+        if(intent != null) {
+            String tTitle = intent.getStringExtra(ConfirmActivity.EXTRA_TITLE);
+            String tDescription = intent.getStringExtra(ConfirmActivity.EXTRA_DESCRIPTION);
+            String tLocation = intent.getStringExtra(ConfirmActivity.EXTRA_LOCATION);
+            String tDate = intent.getStringExtra(ConfirmActivity.EXTRA_DATE);
+
+            titleList.add(tTitle);
+            descriptionList.add(tDescription);
+            locationList.add(tLocation);
+            dateList.add(tDate);
+        }
+
 
         // Initialize the RecyclerView.
         mRecyclerView = findViewById(R.id.recyclerView);
@@ -52,10 +72,10 @@ public class MainActivity extends AppCompatActivity {
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         // Initialize the ArrayList that will contain the data.
-        mSportsData = new ArrayList<>();
+        mIssueData = new ArrayList<>();
 
         // Initialize the adapter and set it to the RecyclerView.
-        mAdapter = new SportsAdapter(this, mSportsData);
+        mAdapter = new IssuesAdapter(this, mIssueData);
         mRecyclerView.setAdapter(mAdapter);
 
         // Get the data.
@@ -72,8 +92,8 @@ public class MainActivity extends AppCompatActivity {
              * Defines the drag and drop functionality.
              *
              * @param recyclerView The RecyclerView that contains the list items
-             * @param viewHolder The SportsViewHolder that is being moved
-             * @param target The SportsViewHolder that you are switching the
+             * @param viewHolder The IssuesViewHolder that is being moved
+             * @param target The IssuesiewHolder that you are switching the
              *               original one with.
              * @return true if the item was moved, false otherwise
              */
@@ -86,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
                 int to = target.getAdapterPosition();
 
                 // Swap the items and notify the adapter.
-                Collections.swap(mSportsData, from, to);
+                Collections.swap(mIssueData, from, to);
                 mAdapter.notifyItemMoved(from, to);
                 return true;
             }
@@ -101,7 +121,7 @@ public class MainActivity extends AppCompatActivity {
             public void onSwiped(RecyclerView.ViewHolder viewHolder,
                                  int direction) {
                 // Remove the item from the dataset.
-                mSportsData.remove(viewHolder.getAdapterPosition());
+                mIssueData.remove(viewHolder.getAdapterPosition());
                 // Notify the adapter.
                 mAdapter.notifyItemRemoved(viewHolder.getAdapterPosition());
             }
@@ -112,45 +132,59 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Initialize the sports data from resources.
+     * Initialize the issue data from resources.
      */
     private void initializeData() {
         // Get the resources from the XML file.
-        String[] sportsList = getResources()
-                .getStringArray(R.array.sports_titles);
-        String[] sportsInfo = getResources()
-                .getStringArray(R.array.sports_info);
-        TypedArray sportsImageResources = getResources()
-                .obtainTypedArray(R.array.sports_images);
+        String[] issueList = getResources()
+                .getStringArray(R.array.issue_titles);
+        String[] issueInfo = getResources()
+                .getStringArray(R.array.issue_info);
+        String[] issueDate = getResources()
+                .getStringArray(R.array.issue_date);
+        String[] issueLoc = getResources()
+                .getStringArray(R.array.issue_loc);
+        TypedArray issueImageResources = getResources()
+                .obtainTypedArray(R.array.issue_images);
+
+        for(String item : issueList) {
+            titleList.add(item);
+        }
+        for(String item : issueInfo) {
+            descriptionList.add(item);
+        }
+        for(String item : issueDate) {
+            dateList.add(item);
+        }
+        for(String item : issueLoc) {
+            locationList.add(item);
+        }
 
         // Clear the existing data (to avoid duplication).
-        mSportsData.clear();
+        mIssueData.clear();
 
-        // Create the ArrayList of Sports objects with the titles and
-        // information about each sport
-        for (int i = 0; i < sportsList.length; i++) {
-            mSportsData.add(new Sport(sportsList[i], sportsInfo[i],
-                    sportsImageResources.getResourceId(i, 0)));
+        // Create the ArrayList of Issue objects with the titles and
+        // information about each issue
+        for (int i = 0; i < titleList.size(); i++) {
+            if(titleList.get(i) != null) {
+                mIssueData.add(new Issue(titleList.get(i), descriptionList.get(i),
+                        locationList.get(i), dateList.get(i),
+                        issueImageResources.getResourceId(0, 0)));
+            }
         }
 
         // Recycle the typed array.
-        sportsImageResources.recycle();
+        issueImageResources.recycle();
 
         // Notify the adapter of the change.
         mAdapter.notifyDataSetChanged();
     }
 
-    /**
-     * onClick method for th FAB that resets the data.
-     *
-     * @param view The button view that was clicked.
-     */
-    public void resetSports(View view) {
+    public void resetIssues(View view) {
         initializeData();
     }
 
     public void addIssue(View view) {
         startActivity(new Intent(MainActivity.this, AddActivity.class));
     }
-
 }

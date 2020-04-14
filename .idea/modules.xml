@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Manoa-Fix-It.iml" filepath="$PROJECT_DIR$/Manoa-Fix-It.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Manoa-Fix-It.iml" filepath="$PROJECT_DIR$/Manoa-Fix-It.iml" group="Manoa-Fix-It" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="Manoa-Fix-It/app" />
     </modules>
   </component>
 </project>

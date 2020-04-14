@@ -25,7 +25,7 @@
         tools:context="com.example.android.materialme.DetailActivity">
 
         <ImageView
-            android:id="@+id/sportsImageDetail"
+            android:id="@+id/issueImageDetail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true" />
@@ -35,39 +35,50 @@
             style="@style/TextAppearance.AppCompat.Headline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@id/sportsImageDetail"
+            android:layout_alignBottom="@id/issueImageDetail"
             android:padding="16dp"
             android:text="@string/title_placeholder"
             android:theme="@style/ThemeOverlay.AppCompat.Dark" />
 
         <TextView
-            android:id="@+id/newsTitleDetail"
+            android:id="@+id/resolveDetail"
             style="@style/TextAppearance.AppCompat.Subhead"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/sportsImageDetail"
+            android:layout_below="@id/issueImageDetail"
             android:padding="16dp"
             android:text="@string/news_placeholder"
             android:textColor="?android:textColorSecondary" />
 
         <TextView
-            android:id="@+id/newsTitleDetail2"
+            android:id="@+id/dateDetail"
             style="@style/TextAppearance.AppCompat.Subhead"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/sportsImageDetail"
+            android:layout_below="@id/issueImageDetail"
             android:layout_marginTop="54dp"
             android:padding="16dp"
             android:text="Date: 3/7/2020"
             android:textColor="?android:textColorSecondary" />
 
         <TextView
-            android:id="@+id/subTitleDetail"
+            android:id="@+id/locationDetail"
             style="@style/TextAppearance.AppCompat.Subhead"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/newsTitleDetail"
-            android:layout_marginTop="50dp"
+            android:layout_below="@id/dateDetail"
+            android:layout_marginTop="8dp"
+            android:padding="16dp"
+            android:text="POST" />
+
+
+        <TextView
+            android:id="@+id/descriptionDetail"
+            style="@style/TextAppearance.AppCompat.Subhead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/locationDetail"
+            android:layout_marginTop="8dp"
             android:padding="16dp"
             android:text="@string/subtitle_detail_text" />
 

@@ -31,6 +31,10 @@
         </activity>
         <activity android:name=".DetailActivity"></activity>
         <activity android:name=".AddActivity"></activity>
+        <activity android:name=".ConfirmActivity"></activity>
     </application>
+
+    <uses-feature android:name="android.hardware.camera"
+        android:required="true" />
 
 </manifest>

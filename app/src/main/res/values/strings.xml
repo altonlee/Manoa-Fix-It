@@ -26,59 +26,28 @@
 
     <string name="name_label_text"></string>
 
-    <string-array name="sports_titles">
+    <string-array name="issue_titles">
         <item>Kuykendall Bathrooms</item>
         <item>POST ICSpace Printer</item>
         <item>WRC Broken Treadmills</item>
-        <item>Bowling</item>
-        <item>Cycling</item>
-        <item>Golf</item>
-        <item>Running</item>
-        <item>Soccer</item>
-        <item>Swimming</item>
-        <item>Table Tennis</item>
-        <item>Tennis</item>
     </string-array>
 
-    <string-array name="sports_info">
+    <string-array name="issue_info">
         <item>The mens mathrooms never have any toilet paper. </item>
         <item>The ICSpace printer has been out of order for the past two months.</item>
         <item>If theyre broken, shouldnt they be removed?</item>
-        <item>Here is some Bowling news!</item>
-        <item>Here is some Cycling news!</item>
-        <item>Here is some Golf news!</item>
-        <item>Here is some Running news!</item>
-        <item>Here is some Soccer news!</item>
-        <item>Here is some Swimming news!</item>
-        <item>Here is some Table Tennis news!</item>
-        <item>Here is some Tennis news!</item>
+
     </string-array>
 
     <string-array name="issue_status">
         <item>Unresolved</item>
         <item>Resolved</item>
         <item>Pending</item>
-        <item>Unresolved</item>
-        <item>Unresolved</item>
-        <item>Unresolved</item>
-        <item>Unresolved</item>
-        <item>Unresolved</item>
-        <item>Unresolved</item>
-        <item>Unresolved</item>
-        <item>Unresolved</item>
     </string-array>
 
     <string-array name="issue_date">
         <item>Tue Mar 3 2020 01:39:55 GMT-1000</item>
         <item>Wed Mar 4 2020 11:39:00 GMT-1000</item>
-        <item>Tue Mar 10 2020 6:44:23 GMT-1000</item>
-        <item>Tue Mar 10 2020 6:44:23 GMT-1000</item>
-        <item>Tue Mar 10 2020 6:44:23 GMT-1000</item>
-        <item>Tue Mar 10 2020 6:44:23 GMT-1000</item>
-        <item>Tue Mar 10 2020 6:44:23 GMT-1000</item>
-        <item>Tue Mar 10 2020 6:44:23 GMT-1000</item>
-        <item>Tue Mar 10 2020 6:44:23 GMT-1000</item>
-        <item>Tue Mar 10 2020 6:44:23 GMT-1000</item>
         <item>Tue Mar 10 2020 6:44:23 GMT-1000</item>
     </string-array>
 
@@ -86,30 +55,13 @@
         <item>Kuykendall Building</item>
         <item>POST Building</item>
         <item>Campus Center</item>
-        <item>Undefined</item>
-        <item>Undefined</item>
-        <item>Undefined</item>
-        <item>Undefined</item>
-        <item>Undefined</item>
-        <item>Undefined</item>
-        <item>Undefined</item>
-        <item>Undefined</item>
     </string-array>
 
 
-    <array name="sports_images">
+    <array name="issue_images">
         <item>@drawable/img_baseball</item>
         <item>@drawable/img_badminton</item>
         <item>@drawable/img_basketball</item>
-        <item>@drawable/img_bowling</item>
-        <item>@drawable/img_cycling</item>
-        <item>@drawable/img_golf</item>
-        <item>@drawable/img_running</item>
-        <item>@drawable/img_soccer</item>
-        <item>@drawable/img_swimming</item>
-        <item>@drawable/img_tabletennis</item>
-        <item>@drawable/img_tennis</item>
     </array>
-
 
 </resources>

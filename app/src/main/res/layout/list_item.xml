@@ -25,7 +25,7 @@
         android:layout_height="wrap_content">
 
         <ImageView
-            android:id="@+id/sportsImage"
+            android:id="@+id/issueImage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"/>
@@ -36,28 +36,37 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="8dp"
-            android:layout_alignBottom="@id/sportsImage"
+            android:layout_alignBottom="@id/issueImage"
             android:theme="@style/ThemeOverlay.AppCompat.Dark"
             android:text="@string/title_placeholder" />
 
         <TextView
-            android:id="@+id/newsTitle"
+            android:id="@+id/date"
             style="@style/TextAppearance.AppCompat.Subhead"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/sportsImage"
+            android:layout_below="@id/issueImage"
             android:textColor="?android:textColorSecondary"
             android:padding="8dp"
-            android:text="@string/news_placeholder" />
+            android:text="Date" />
 
         <TextView
-            android:id="@+id/subTitle"
+            android:id="@+id/location"
             style="@style/TextAppearance.AppCompat.Subhead"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/newsTitle"
+            android:layout_below="@id/date"
             android:padding="8dp"
-            android:text="@string/sports_info_placeholder" />
+            android:text="Location" />
+
+        <TextView
+            android:id="@+id/description"
+            style="@style/TextAppearance.AppCompat.Subhead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/location"
+            android:padding="8dp"
+            android:text="Description" />
 
     </RelativeLayout>
 </android.support.v7.widget.CardView>
