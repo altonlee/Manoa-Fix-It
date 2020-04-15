@@ -1,5 +1,6 @@
 package com.example.manoa_fix_it;
 
+import android.content.res.TypedArray;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -17,8 +18,11 @@ import androidx.recyclerview.widget.ItemTouchHelper;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Date;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -32,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         // Initialize toolbar
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -140,9 +145,20 @@ public class MainActivity extends AppCompatActivity {
 
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+        TypedArray images = getResources().obtainTypedArray(R.array.issue_images);
+        int index = data.getIntExtra("image", 0);
 
         if (requestCode == 1 && resultCode == RESULT_OK) {
-            Issue issue = new Issue(data.getStringExtra("title"), "Unresolved", data.getStringExtra("date"), data.getStringExtra("info"), 0);
+            Date date = new Date();
+            SimpleDateFormat df = new SimpleDateFormat("MMM dd yyyy");
+
+            Issue issue = new Issue(
+                    data.getStringExtra("title"),
+                    data.getStringExtra("loc"),
+                    "Unresolved",
+                    df.format(date),
+                    data.getStringExtra("info"),
+                    images.getResourceId(index, 0));
             mIssueViewModel.insert(issue);
         }
     }

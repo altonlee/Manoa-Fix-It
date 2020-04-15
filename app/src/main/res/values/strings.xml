@@ -1,16 +1,12 @@
 <resources>
     <string name="app_name">Manoa-Fix-It</string>
     <string name="action_settings">Settings</string>
-    <!-- Menu labels -->
+    <!-- Main Menu labels -->
     <string name="action_sort">Sort By</string>
-    <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
 
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <!-- Details Menu labels -->
+    <string name="details_edit">Edit</string>
+    <string name="details_delete">Delete</string>
     <!-- Form Labels -->
     <string name="form_image">Image Placeholder</string>
     <string name="form_title">Title</string>
@@ -23,15 +19,15 @@
     <string name="form_info_hint">Please describe the issue.</string>
     <string name="submit_label">SUBMIT</string>
 
-
     <!-- sample issue data -->
     <string name="title_placeholder">Title</string>
+    <string name="loc_placeholder">Campus Center</string>
     <string name="status_placeholder">Unresolved</string>
     <string name="date_placeholder">December 26, 2019</string>
     <string name="detail_placeholder">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non aliquet augue, faucibus tincidunt ligula. \n
-\n
-Vestibulum gravida, nunc at venenatis egestas, nisl massa varius leo, sit amet sagittis nisl quam et leo.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non aliquet augue, faucibus tincidunt ligula. \n
+        \n
+        Vestibulum gravida, nunc at venenatis egestas, nisl massa varius leo, sit amet sagittis nisl quam et leo.
     </string>
 
     <string-array name="issue_titles">
@@ -39,6 +35,13 @@ Vestibulum gravida, nunc at venenatis egestas, nisl massa varius leo, sit amet s
         <item>POST ICSpace Printer</item>
         <item>WRC Broken Treadmills</item>
         <item>Bilger Addition Heavy Doors</item>
+    </string-array>
+
+    <string-array name="issue_locs">
+        <item>Kuykendall Hall</item>
+        <item>POST Building</item>
+        <item>Campus Center</item>
+        <item>Bilger Hall</item>
     </string-array>
 
     <string-array name="issue_statuses">
@@ -49,10 +52,10 @@ Vestibulum gravida, nunc at venenatis egestas, nisl massa varius leo, sit amet s
     </string-array>
 
     <string-array name="issue_dates">
-        <item>July 8, 2017</item>
-        <item>August 20, 2018</item>
-        <item>December 26, 2019</item>
-        <item>January 5, 2020</item>
+        <item>Jul 8 2017</item>
+        <item>Aug 20 2018</item>
+        <item>Dec 26 2019</item>
+        <item>Jan 5 2020</item>
     </string-array>
 
     <string-array name="issue_info">
@@ -63,9 +66,30 @@ Vestibulum gravida, nunc at venenatis egestas, nisl massa varius leo, sit amet s
     </string-array>
 
     <string-array name="issue_images">
-        <item>@drawable/img_swimming</item>
+        <item>@drawable/img_baseball</item>
+        <item>@drawable/img_badminton</item>
+        <item>@drawable/img_basketball</item>
+        <item>@drawable/img_bowling</item>
         <item>@drawable/img_cycling</item>
-        <item>@drawable/img_running</item>
         <item>@drawable/img_golf</item>
+        <item>@drawable/img_running</item>
+        <item>@drawable/img_soccer</item>
+        <item>@drawable/img_swimming</item>
+        <item>@drawable/img_tabletennis</item>
+        <item>@drawable/img_tennis</item>
+    </string-array>
+
+    <string-array name="image_spinner">
+        <item>Baseball</item>
+        <item>Badminton</item>
+        <item>Basketball</item>
+        <item>Bowling</item>
+        <item>Cycling</item>
+        <item>Golf</item>
+        <item>Running</item>
+        <item>Soccer</item>
+        <item>Swimming</item>
+        <item>Table Tennis</item>
+        <item>Tennis</item>
     </string-array>
 </resources>

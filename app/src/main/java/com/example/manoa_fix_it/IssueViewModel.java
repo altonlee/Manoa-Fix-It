@@ -24,4 +24,5 @@ public class IssueViewModel extends AndroidViewModel {
     LiveData<List<Issue>> getAllIssues() { return allIssues; }
 
     public void insert(Issue issue) {mRepository.insert(issue); }
+    public void delete(Issue issue) {mRepository.deleteIssue(issue); }
 }

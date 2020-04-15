@@ -6,6 +6,8 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -27,13 +29,36 @@ public class IssueActivity extends AppCompatActivity {
         // Initialize views
         ImageView img = findViewById(R.id.issueImageDetail);
         TextView status = findViewById(R.id.statusDetail);
-        TextView date = findViewById(R.id.dateDetail);
         TextView info = findViewById(R.id.infoDetail);
 
         // Set data into Intent extra
         status.setText(getIntent().getStringExtra("status"));
-        date.setText(getIntent().getStringExtra("date"));
         info.setText(getIntent().getStringExtra("info"));
         Glide.with(this).load(getIntent().getIntExtra("image_resource", 0)).into(img);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_issue_details, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        switch (item.getItemId()) {
+            case R.id.issue_delete:
+                // get sort options
+                return true;
+            case R.id.issue_edit:
+                // show app settings UI
+                return true;
+            default:
+                // action not recognized
+                return super.onOptionsItemSelected(item);
+        }
     }
 }

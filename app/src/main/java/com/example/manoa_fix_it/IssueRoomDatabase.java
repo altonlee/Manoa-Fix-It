@@ -10,6 +10,8 @@ import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 
+import java.util.Date;
+
 @Database(entities = {Issue.class}, version = 1, exportSchema = false)
 public abstract class IssueRoomDatabase extends RoomDatabase {
     public abstract IssueDao issueDao();
@@ -49,6 +51,8 @@ public abstract class IssueRoomDatabase extends RoomDatabase {
     private static class PopulateDbAsync extends AsyncTask<Void, Void, Void> {
         private final IssueDao dao;
         String[] titles = cont.getResources().getStringArray(R.array.issue_titles);
+        String[] locs = cont.getResources().getStringArray(R.array.issue_locs);
+        String[] statuses = cont.getResources().getStringArray(R.array.issue_statuses);
         String[] dates = cont.getResources().getStringArray(R.array.issue_dates);
         String[] info = cont.getResources().getStringArray(R.array.issue_info);
         TypedArray images = cont.getResources().obtainTypedArray(R.array.issue_images);
@@ -62,9 +66,15 @@ public abstract class IssueRoomDatabase extends RoomDatabase {
             dao.deleteAll();
 
             for (int i = 0; i < titles.length; i++) {
-                dao.insert(new Issue(titles[i], "Unresolved", dates[i], info[i], images.getResourceId(i, 0)));
+                dao.insert(new Issue(
+                        titles[i],
+                        locs[i],
+                        statuses[i],
+                        dates[i],
+                        info[i],
+                        images.getResourceId(i, 0)
+                ));
             }
-
             return null;
         }
     }

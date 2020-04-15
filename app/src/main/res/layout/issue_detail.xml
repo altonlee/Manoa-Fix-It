@@ -36,13 +36,28 @@
                 android:adjustViewBounds="true"/>
 
             <TextView
+                android:id="@+id/locDetail"
+                style="@style/TextAppearance.AppCompat.Subhead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dateDetail"
+                android:layout_alignRight="@id/dateDetail"
+                android:layout_alignEnd="@id/dateDetail"
+                android:paddingTop="8dp"
+                android:paddingRight="16dp"
+                android:paddingEnd="16dp"
+                android:text="@string/loc_placeholder"
+                android:textColor="?android:textColorSecondary" />
+
+            <TextView
                 android:id="@+id/statusDetail"
                 style="@style/TextAppearance.AppCompat.Subhead"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/issueImageDetail"
-                android:layout_marginTop="0dp"
-                android:padding="16dp"
+                android:paddingTop="16dp"
+                android:paddingLeft="16dp"
+                android:paddingStart="16dp"
                 android:text="@string/status_placeholder"
                 android:textColor="?android:textColorSecondary" />
 
@@ -53,14 +68,18 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/issueImageDetail"
                 android:layout_alignRight="@id/issueImageDetail"
-                android:padding="16dp"
-                android:text="@string/date_placeholder"/>
+                android:layout_alignEnd="@id/issueImageDetail"
+                android:paddingTop="16dp"
+                android:paddingRight="16dp"
+                android:paddingEnd="16dp"
+                android:text="@string/date_placeholder" />
+
             <TextView
                 android:id="@+id/infoDetail"
                 style="@style/TextAppearance.AppCompat.Subhead"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/statusDetail"
+                android:layout_below="@id/locDetail"
                 android:padding="16dp"
                 android:text="@string/detail_placeholder"/>
         </RelativeLayout>

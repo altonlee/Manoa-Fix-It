@@ -52,8 +52,8 @@ public class IssuesAdapter extends RecyclerView.Adapter<IssuesAdapter.ViewHolder
         holder.bindTo(curr);
     }
 
-    void setIssues(List<Issue> words){
-        issueData = words;
+    void setIssues(List<Issue> issues){
+        issueData = issues;
         notifyDataSetChanged();
     }
 
@@ -69,6 +69,7 @@ public class IssuesAdapter extends RecyclerView.Adapter<IssuesAdapter.ViewHolder
     class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         // Member variables
         private TextView title;
+        private TextView loc;
         private TextView status;
         private TextView date;
         private TextView info;
@@ -82,6 +83,7 @@ public class IssuesAdapter extends RecyclerView.Adapter<IssuesAdapter.ViewHolder
             super(itemView);
             // Initialize member variables
             title = itemView.findViewById(R.id.title);
+            loc = itemView.findViewById(R.id.loc);
             status = itemView.findViewById(R.id.status);
             date = itemView.findViewById(R.id.date);
             info = itemView.findViewById(R.id.detail);
@@ -96,6 +98,7 @@ public class IssuesAdapter extends RecyclerView.Adapter<IssuesAdapter.ViewHolder
         void bindTo(Issue curr) {
             // Populate View with issue details
             title.setText(curr.getTitle());
+            loc.setText(curr.getLoc());
             status.setText(curr.getStatus());
             date.setText(curr.getDate());
             info.setText(curr.getInfo());
@@ -111,12 +114,12 @@ public class IssuesAdapter extends RecyclerView.Adapter<IssuesAdapter.ViewHolder
             Issue curr = issueData.get(getAdapterPosition());
             Intent detailIntent = new Intent(context, IssueActivity.class);
             detailIntent.putExtra("title", curr.getTitle());
+            detailIntent.putExtra("loc", curr.getLoc());
             detailIntent.putExtra("status", curr.getStatus());
             detailIntent.putExtra("date", curr.getDate());
             detailIntent.putExtra("info", curr.getInfo());
             detailIntent.putExtra("image_resource", curr.getImageResource());
             context.startActivity(detailIntent);
         }
-
     }
 }

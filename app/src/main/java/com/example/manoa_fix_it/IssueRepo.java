@@ -38,4 +38,19 @@ public class IssueRepo {
             return null;
         }
     }
+
+    public void deleteIssue (Issue issue) { new deleteAsyncTask(issueDao).execute(issue); }
+    private static class deleteAsyncTask extends AsyncTask<Issue, Void, Void> {
+        private IssueDao mAsyncTaskDao;
+
+        deleteAsyncTask(IssueDao dao) {
+            mAsyncTaskDao = dao;
+        }
+
+        @Override
+        protected  Void doInBackground(final Issue... params) {
+            mAsyncTaskDao.deleteIssue(params[0]);
+            return null;
+        }
+    }
 }
