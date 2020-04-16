@@ -13,6 +13,9 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
+import java.text.SimpleDateFormat;
+import java.util.Locale;
+
 public class IssueActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,12 +31,18 @@ public class IssueActivity extends AppCompatActivity {
 
         // Initialize views
         ImageView img = findViewById(R.id.issueImageDetail);
+        TextView loc = findViewById(R.id.locDetail);
         TextView status = findViewById(R.id.statusDetail);
+        TextView date = findViewById(R.id.dateDetail);
         TextView info = findViewById(R.id.infoDetail);
+        TextView pts = findViewById(R.id.pointsDetail);
 
         // Set data into Intent extra
+        loc.setText(getIntent().getStringExtra("loc"));
         status.setText(getIntent().getStringExtra("status"));
+        date.setText(getIntent().getStringExtra("date"));
         info.setText(getIntent().getStringExtra("info"));
+        pts.setText(getIntent().getStringExtra("points"));
         Glide.with(this).load(getIntent().getIntExtra("image_resource", 0)).into(img);
     }
 

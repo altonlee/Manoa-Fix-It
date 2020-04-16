@@ -118,6 +118,7 @@ public class IssuesAdapter extends RecyclerView.Adapter<IssuesAdapter.ViewHolder
             detailIntent.putExtra("status", curr.getStatus());
             detailIntent.putExtra("date", curr.getDate());
             detailIntent.putExtra("info", curr.getInfo());
+            detailIntent.putExtra("points", curr.getPoints() + "");
             detailIntent.putExtra("image_resource", curr.getImageResource());
             context.startActivity(detailIntent);
         }

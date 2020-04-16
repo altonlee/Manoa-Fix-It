@@ -16,10 +16,6 @@
         "source": "C:\\Users\\theni\\Documents\\GitHub\\Manoa-Fix-It\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\theni\\Documents\\GitHub\\Manoa-Fix-It\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_camera_alt_24dp.xml.flat",
-        "source": "C:\\Users\\theni\\Documents\\GitHub\\Manoa-Fix-It\\app\\src\\main\\res\\drawable\\ic_camera_alt_24dp.xml"
-    },
-    {
         "merged": "C:\\Users\\theni\\Documents\\GitHub\\Manoa-Fix-It\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\theni\\Documents\\GitHub\\Manoa-Fix-It\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
     },
@@ -36,8 +32,16 @@
         "source": "C:\\Users\\theni\\Documents\\GitHub\\Manoa-Fix-It\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
     },
     {
+        "merged": "C:\\Users\\theni\\Documents\\GitHub\\Manoa-Fix-It\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_sort_24dp.xml.flat",
+        "source": "C:\\Users\\theni\\Documents\\GitHub\\Manoa-Fix-It\\app\\src\\main\\res\\drawable\\ic_sort_24dp.xml"
+    },
+    {
         "merged": "C:\\Users\\theni\\Documents\\GitHub\\Manoa-Fix-It\\app\\build\\intermediates\\res\\merged\\debug\\drawable_img_cycling.jpg.flat",
         "source": "C:\\Users\\theni\\Documents\\GitHub\\Manoa-Fix-It\\app\\src\\main\\res\\drawable\\img_cycling.jpg"
+    },
+    {
+        "merged": "C:\\Users\\theni\\Documents\\GitHub\\Manoa-Fix-It\\app\\build\\intermediates\\res\\merged\\debug\\drawable_img_badminton.jpg.flat",
+        "source": "C:\\Users\\theni\\Documents\\GitHub\\Manoa-Fix-It\\app\\src\\main\\res\\drawable\\img_badminton.jpg"
     },
     {
         "merged": "C:\\Users\\theni\\Documents\\GitHub\\Manoa-Fix-It\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
@@ -48,20 +52,12 @@
         "source": "C:\\Users\\theni\\Documents\\GitHub\\Manoa-Fix-It\\app\\src\\main\\res\\drawable\\img_running.jpg"
     },
     {
-        "merged": "C:\\Users\\theni\\Documents\\GitHub\\Manoa-Fix-It\\app\\build\\intermediates\\res\\merged\\debug\\drawable_img_badminton.jpg.flat",
-        "source": "C:\\Users\\theni\\Documents\\GitHub\\Manoa-Fix-It\\app\\src\\main\\res\\drawable\\img_badminton.jpg"
-    },
-    {
-        "merged": "C:\\Users\\theni\\Documents\\GitHub\\Manoa-Fix-It\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\theni\\Documents\\GitHub\\Manoa-Fix-It\\app\\src\\main\\res\\layout\\activity_main.xml"
-    },
-    {
         "merged": "C:\\Users\\theni\\Documents\\GitHub\\Manoa-Fix-It\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\theni\\Documents\\GitHub\\Manoa-Fix-It\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\theni\\Documents\\GitHub\\Manoa-Fix-It\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\theni\\Documents\\GitHub\\Manoa-Fix-It\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\theni\\Documents\\GitHub\\Manoa-Fix-It\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\theni\\Documents\\GitHub\\Manoa-Fix-It\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
         "merged": "C:\\Users\\theni\\Documents\\GitHub\\Manoa-Fix-It\\app\\build\\intermediates\\res\\merged\\debug\\drawable_img_basketball.jpg.flat",
@@ -70,6 +66,10 @@
     {
         "merged": "C:\\Users\\theni\\Documents\\GitHub\\Manoa-Fix-It\\app\\build\\intermediates\\res\\merged\\debug\\drawable_img_tabletennis.jpg.flat",
         "source": "C:\\Users\\theni\\Documents\\GitHub\\Manoa-Fix-It\\app\\src\\main\\res\\drawable\\img_tabletennis.jpg"
+    },
+    {
+        "merged": "C:\\Users\\theni\\Documents\\GitHub\\Manoa-Fix-It\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\theni\\Documents\\GitHub\\Manoa-Fix-It\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
     },
     {
         "merged": "C:\\Users\\theni\\Documents\\GitHub\\Manoa-Fix-It\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
@@ -88,8 +88,16 @@
         "source": "C:\\Users\\theni\\Documents\\GitHub\\Manoa-Fix-It\\app\\src\\main\\res\\drawable\\img_bowling.jpg"
     },
     {
+        "merged": "C:\\Users\\theni\\Documents\\GitHub\\Manoa-Fix-It\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_issue.xml.flat",
+        "source": "C:\\Users\\theni\\Documents\\GitHub\\Manoa-Fix-It\\app\\src\\main\\res\\layout\\fragment_issue.xml"
+    },
+    {
         "merged": "C:\\Users\\theni\\Documents\\GitHub\\Manoa-Fix-It\\app\\build\\intermediates\\res\\merged\\debug\\layout_add_issue.xml.flat",
         "source": "C:\\Users\\theni\\Documents\\GitHub\\Manoa-Fix-It\\app\\src\\main\\res\\layout\\add_issue.xml"
+    },
+    {
+        "merged": "C:\\Users\\theni\\Documents\\GitHub\\Manoa-Fix-It\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_complaint.xml.flat",
+        "source": "C:\\Users\\theni\\Documents\\GitHub\\Manoa-Fix-It\\app\\src\\main\\res\\layout\\fragment_complaint.xml"
     },
     {
         "merged": "C:\\Users\\theni\\Documents\\GitHub\\Manoa-Fix-It\\app\\build\\intermediates\\res\\merged\\debug\\layout_issue_detail.xml.flat",

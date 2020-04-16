@@ -48,6 +48,27 @@
             android:textColor="?android:textColorSecondary" />
 
         <TextView
+            android:id="@+id/points"
+            style="@style/TextAppearance.AppCompat.Subhead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/status"
+            android:paddingLeft="8dp"
+            android:text="42069"
+            android:textColor="?android:textColorSecondary" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.AppCompat.Subhead"
+            android:textColor="?android:textColorSecondary"
+            android:layout_below="@id/status"
+            android:layout_toRightOf="@id/points"
+            android:paddingLeft="5dp"
+            android:paddingStart="5dp"
+            android:text="Likes" />
+
+        <TextView
             android:id="@+id/date"
             style="@style/TextAppearance.AppCompat.Subhead"
             android:layout_width="wrap_content"

@@ -55,6 +55,7 @@ public abstract class IssueRoomDatabase extends RoomDatabase {
         String[] statuses = cont.getResources().getStringArray(R.array.issue_statuses);
         String[] dates = cont.getResources().getStringArray(R.array.issue_dates);
         String[] info = cont.getResources().getStringArray(R.array.issue_info);
+        int[] pts = cont.getResources().getIntArray(R.array.issue_points);
         TypedArray images = cont.getResources().obtainTypedArray(R.array.issue_images);
 
         PopulateDbAsync(IssueRoomDatabase db) {
@@ -72,6 +73,7 @@ public abstract class IssueRoomDatabase extends RoomDatabase {
                         statuses[i],
                         dates[i],
                         info[i],
+                        pts[i],
                         images.getResourceId(i, 0)
                 ));
             }

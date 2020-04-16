@@ -4,6 +4,7 @@ import android.content.res.TypedArray;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.tabs.TabLayout;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.ItemTouchHelper;
+import androidx.viewpager.widget.ViewPager;
 
 import android.view.View;
 import android.view.Menu;
@@ -24,6 +26,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
     // Member variables
@@ -40,6 +43,30 @@ public class MainActivity extends AppCompatActivity {
         // Initialize toolbar
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        // Toolbar tabs
+        TabLayout tabLayout = findViewById(R.id.tab_layout);
+        tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_issues));
+        tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_complaints));
+        tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
+        //
+        final ViewPager viewPager = findViewById(R.id.pager);
+        final PagerAdapter adapter = new PagerAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
+        viewPager.setAdapter(adapter);
+        // Tab onClickListeners
+        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                viewPager.setCurrentItem(tab.getPosition());
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) { }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) { }
+        });
 
         // Initialize FAB
         FloatingActionButton fab = findViewById(R.id.fab);
@@ -68,54 +95,6 @@ public class MainActivity extends AppCompatActivity {
                 issuesAdapter.setIssues(issues);
             }
         });
-
-        // Helper class for creating swipe to dismiss and drag and drop
-        // functionality.
-        ItemTouchHelper helper = new ItemTouchHelper(new ItemTouchHelper
-                .SimpleCallback(
-                ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT |
-                        ItemTouchHelper.DOWN | ItemTouchHelper.UP,
-                ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT) {
-            /**
-             * Defines the drag and drop functionality.
-             *
-             * @param recyclerView The RecyclerView that contains the list items
-             * @param viewHolder The SportsViewHolder that is being moved
-             * @param target The SportsViewHolder that you are switching the
-             *               original one with.
-             * @return true if the item was moved, false otherwise
-             */
-            @Override
-            public boolean onMove(RecyclerView recyclerView,
-                                  RecyclerView.ViewHolder viewHolder,
-                                  RecyclerView.ViewHolder target) {
-                // Get the from and to positions.
-                int from = viewHolder.getAdapterPosition();
-                int to = target.getAdapterPosition();
-
-                // Swap the items and notify the adapter.
-                Collections.swap(issueData, from, to);
-                issuesAdapter.notifyItemMoved(from, to);
-                return true;
-            }
-
-            /**
-             * Defines the swipe to dismiss functionality.
-             *
-             * @param viewHolder The viewholder being swiped.
-             * @param direction The direction it is swiped in.
-             */
-            @Override
-            public void onSwiped(RecyclerView.ViewHolder viewHolder,
-                                 int direction) {
-                // Remove the item from the dataset.
-                issueData.remove(viewHolder.getAdapterPosition());
-                // Notify the adapter.
-                issuesAdapter.notifyItemRemoved(viewHolder.getAdapterPosition());
-            }
-        });
-        // Attach the helper to the RecyclerView.
-        helper.attachToRecyclerView(recyclerView);
     }
 
     @Override
@@ -150,7 +129,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (requestCode == 1 && resultCode == RESULT_OK) {
             Date date = new Date();
-            SimpleDateFormat df = new SimpleDateFormat("MMM dd yyyy");
+            SimpleDateFormat df = new SimpleDateFormat("MMM dd yyyy", Locale.US);
 
             Issue issue = new Issue(
                     data.getStringExtra("title"),
@@ -158,6 +137,7 @@ public class MainActivity extends AppCompatActivity {
                     "Unresolved",
                     df.format(date),
                     data.getStringExtra("info"),
+                    0,
                     images.getResourceId(index, 0));
             mIssueViewModel.insert(issue);
         }
