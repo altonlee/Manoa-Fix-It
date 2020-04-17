@@ -1,10 +1,12 @@
 package com.example.manoa_fix_it;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.lifecycle.ViewModelProviders;
 
 import android.view.Menu;
 import android.view.MenuItem;
@@ -24,24 +26,26 @@ public class IssueActivity extends AppCompatActivity {
 
         // Initialize toolbar
         Toolbar toolbar = findViewById(R.id.toolbar_detail);
-        toolbar.setTitle(getIntent().getStringExtra("title"));
+        toolbar.setTitle("View Issue");
         setSupportActionBar(toolbar);
         ActionBar ab = getSupportActionBar();
         ab.setDisplayHomeAsUpEnabled(true);
 
         // Initialize views
         ImageView img = findViewById(R.id.issueImageDetail);
+        TextView title = findViewById(R.id.titleDetail);
         TextView loc = findViewById(R.id.locDetail);
         TextView status = findViewById(R.id.statusDetail);
         TextView date = findViewById(R.id.dateDetail);
-        TextView info = findViewById(R.id.infoDetail);
+        TextView desc = findViewById(R.id.infoDetail);
         TextView pts = findViewById(R.id.pointsDetail);
 
         // Set data into Intent extra
+        title.setText(getIntent().getStringExtra("title"));
         loc.setText(getIntent().getStringExtra("loc"));
         status.setText(getIntent().getStringExtra("status"));
         date.setText(getIntent().getStringExtra("date"));
-        info.setText(getIntent().getStringExtra("info"));
+        desc.setText(getIntent().getStringExtra("desc"));
         pts.setText(getIntent().getStringExtra("points"));
         Glide.with(this).load(getIntent().getIntExtra("image_resource", 0)).into(img);
     }
@@ -55,15 +59,16 @@ public class IssueActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
+        IssueViewModel issueViewModel = ViewModelProviders.of(this).get(IssueViewModel.class);
+
         switch (item.getItemId()) {
             case R.id.issue_delete:
-                // get sort options
+
                 return true;
             case R.id.issue_edit:
-                // show app settings UI
+                Intent intent = new Intent(IssueActivity.this, EditActivity.class);
+                // add intent.putExtra
+                startActivity(intent);
                 return true;
             default:
                 // action not recognized

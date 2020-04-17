@@ -54,7 +54,7 @@ public abstract class IssueRoomDatabase extends RoomDatabase {
         String[] locs = cont.getResources().getStringArray(R.array.issue_locs);
         String[] statuses = cont.getResources().getStringArray(R.array.issue_statuses);
         String[] dates = cont.getResources().getStringArray(R.array.issue_dates);
-        String[] info = cont.getResources().getStringArray(R.array.issue_info);
+        String[] descs = cont.getResources().getStringArray(R.array.issue_info);
         int[] pts = cont.getResources().getIntArray(R.array.issue_points);
         TypedArray images = cont.getResources().obtainTypedArray(R.array.issue_images);
 
@@ -72,7 +72,7 @@ public abstract class IssueRoomDatabase extends RoomDatabase {
                         locs[i],
                         statuses[i],
                         dates[i],
-                        info[i],
+                        descs[i],
                         pts[i],
                         images.getResourceId(i, 0)
                 ));

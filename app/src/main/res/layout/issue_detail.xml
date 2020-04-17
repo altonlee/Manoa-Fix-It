@@ -36,7 +36,7 @@
                 android:adjustViewBounds="true"/>
 
             <TextView
-                android:id="@+id/statusDetail"
+                android:id="@+id/titleDetail"
                 style="@style/TextAppearance.AppCompat.Headline"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -115,11 +115,22 @@
                 android:text="@string/loc_placeholder"/>
 
             <TextView
+                android:id="@+id/statusDetail"
+                style="@style/TextAppearance.AppCompat.Subhead"
+                android:textColor="?android:textColorSecondary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pointsDetail"
+                android:paddingLeft="16dp"
+                android:paddingTop="8dp"
+                android:text="@string/status_placeholder"/>
+
+            <TextView
                 android:id="@+id/infoDetail"
                 style="@style/TextAppearance.AppCompat.Subhead"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/dateDetail"
+                android:layout_below="@id/statusDetail"
                 android:padding="16dp"
                 android:text="@string/detail_placeholder"/>
         </RelativeLayout>

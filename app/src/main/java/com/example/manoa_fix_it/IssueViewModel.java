@@ -25,4 +25,5 @@ public class IssueViewModel extends AndroidViewModel {
 
     public void insert(Issue issue) {mRepository.insert(issue); }
     public void delete(Issue issue) {mRepository.deleteIssue(issue); }
+    public void sortBy(String sortMethod) { mRepository.sortBy(sortMethod); }
 }

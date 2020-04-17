@@ -27,13 +27,68 @@
             android:theme="@style/ThemeOverlay.AppCompat.Dark" />
 
         <TextView
+            android:id="@+id/points"
+            style="@style/TextAppearance.AppCompat.Subhead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/issueImage"
+            android:paddingTop="8dp"
+            android:paddingLeft="8dp"
+            android:paddingBottom="8dp"
+            android:text="@string/tab_issues"
+            android:textColor="?android:textColorSecondary"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/list_likes_string"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.AppCompat.Subhead"
+            android:textColor="?android:textColorSecondary"
+            android:layout_below="@id/issueImage"
+            android:layout_toRightOf="@id/points"
+            android:paddingTop="8dp"
+            android:paddingLeft="5dp"
+            android:paddingStart="5dp"
+            android:text="Likes" />
+
+        <TextView
+            android:id="@+id/list_separator1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/issueImage"
+            android:layout_toRightOf="@id/list_likes_string"
+            android:padding="8dp"
+            android:text="·" />
+
+        <TextView
+            android:id="@+id/date"
+            style="@style/TextAppearance.AppCompat.Subhead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/issueImage"
+            android:layout_toRightOf="@id/list_separator1"
+            android:paddingTop="8dp"
+            android:text="@string/date_placeholder"
+            android:textColor="?android:textColorSecondary" />
+
+        <TextView
+            android:id="@+id/list_separator2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/issueImage"
+            android:layout_toRightOf="@id/date"
+            android:padding="8dp"
+            android:text="·" />
+
+        <TextView
             android:id="@+id/loc"
             style="@style/TextAppearance.AppCompat.Subhead"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/date"
-            android:layout_alignRight="@id/date"
-            android:paddingRight="8dp"
+            android:layout_below="@id/issueImage"
+            android:layout_toRightOf="@id/list_separator2"
+            android:paddingTop="8dp"
             android:text="@string/loc_placeholder"
             android:textColor="?android:textColorSecondary" />
 
@@ -42,41 +97,9 @@
             style="@style/TextAppearance.AppCompat.Subhead"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/issueImage"
-            android:padding="8dp"
-            android:text="@string/status_placeholder"
-            android:textColor="?android:textColorSecondary" />
-
-        <TextView
-            android:id="@+id/points"
-            style="@style/TextAppearance.AppCompat.Subhead"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/status"
+            android:layout_below="@id/points"
             android:paddingLeft="8dp"
-            android:text="42069"
-            android:textColor="?android:textColorSecondary" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/TextAppearance.AppCompat.Subhead"
-            android:textColor="?android:textColorSecondary"
-            android:layout_below="@id/status"
-            android:layout_toRightOf="@id/points"
-            android:paddingLeft="5dp"
-            android:paddingStart="5dp"
-            android:text="Likes" />
-
-        <TextView
-            android:id="@+id/date"
-            style="@style/TextAppearance.AppCompat.Subhead"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/issueImage"
-            android:layout_alignRight="@id/issueImage"
-            android:padding="8dp"
-            android:text="@string/date_placeholder"
+            android:text="@string/status_placeholder"
             android:textColor="?android:textColorSecondary" />
 
         <TextView
@@ -84,7 +107,7 @@
             style="@style/TextAppearance.AppCompat.Subhead"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/loc"
+            android:layout_below="@id/status"
             android:padding="8dp"
             android:maxLines="1"
             android:text="@string/detail_placeholder" />

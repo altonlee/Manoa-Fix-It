@@ -13,11 +13,14 @@ public class Issue {
     // Member variables represent title and details of issue
     @ColumnInfo(name = "title")
     private String title;
+    @ColumnInfo(name = "loc")
     private String loc;
+    @ColumnInfo(name = "status")
     private String status;
     @ColumnInfo(name = "date")
     private String date;
-    private String info;
+    @ColumnInfo(name = "desc")
+    private String desc;
     @ColumnInfo(name = "points")
     private int points;
     private final int imageResource;
@@ -28,12 +31,12 @@ public class Issue {
      * @param title Issue title.
      * @param info details of issue.
      */
-    public Issue(String title, String loc, String status, String date, String info, int points, int imageResource) {
+    public Issue(String title, String loc, String status, String date, String desc, int points, int imageResource) {
         this.title = title;
         this.loc = loc;
         this.status = status;
         this.date = date;
-        this.info = info;
+        this.desc = desc;
         this.points = points;
         this.imageResource = imageResource;
     }
@@ -69,8 +72,8 @@ public class Issue {
      * Gets issue details.
      * @return issue details.
      */
-    String getInfo() {
-        return info;
+    String getDesc() {
+        return desc;
     }
     /**
      * Gets issue details.

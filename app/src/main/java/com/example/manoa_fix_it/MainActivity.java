@@ -29,8 +29,6 @@ import java.util.List;
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
-    // Member variables
-    private RecyclerView recyclerView;
     private List<Issue> issueData;
     private IssuesAdapter issuesAdapter;
     private IssueViewModel mIssueViewModel;
@@ -49,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_issues));
         tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_complaints));
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
-        //
+        // Tab pages
         final ViewPager viewPager = findViewById(R.id.pager);
         final PagerAdapter adapter = new PagerAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
         viewPager.setAdapter(adapter);
@@ -78,20 +76,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        //Initialize RecyclerView
-        recyclerView = findViewById(R.id.recyclerView);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
         // Initialize adapter with data
         issueData = new ArrayList<Issue>();
         issuesAdapter = new IssuesAdapter(this, issueData);
-        recyclerView.setAdapter(issuesAdapter);
 
         // Initialize IssueViewModel
         mIssueViewModel = ViewModelProviders.of(this).get(IssueViewModel.class);
         mIssueViewModel.getAllIssues().observe(this, new Observer<List<Issue>>() {
             @Override
-            public void onChanged(@Nullable final List<Issue> issues) {
+            public void onChanged(@Nullable List<Issue> issues) {
                 issuesAdapter.setIssues(issues);
             }
         });
@@ -136,7 +129,7 @@ public class MainActivity extends AppCompatActivity {
                     data.getStringExtra("loc"),
                     "Unresolved",
                     df.format(date),
-                    data.getStringExtra("info"),
+                    data.getStringExtra("desc"),
                     0,
                     images.getResourceId(index, 0));
             mIssueViewModel.insert(issue);

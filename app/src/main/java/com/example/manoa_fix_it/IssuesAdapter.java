@@ -11,7 +11,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 
+import org.w3c.dom.Text;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 public class IssuesAdapter extends RecyclerView.Adapter<IssuesAdapter.ViewHolder> {
     // Member variables
@@ -73,6 +79,7 @@ public class IssuesAdapter extends RecyclerView.Adapter<IssuesAdapter.ViewHolder
         private TextView status;
         private TextView date;
         private TextView info;
+        private TextView pts;
         private ImageView image;
 
         /**
@@ -87,6 +94,7 @@ public class IssuesAdapter extends RecyclerView.Adapter<IssuesAdapter.ViewHolder
             status = itemView.findViewById(R.id.status);
             date = itemView.findViewById(R.id.date);
             info = itemView.findViewById(R.id.detail);
+            pts = itemView.findViewById(R.id.points);
             image = itemView.findViewById(R.id.issueImage);
             // Set OnClickListener to entire view
             itemView.setOnClickListener(this);
@@ -101,7 +109,8 @@ public class IssuesAdapter extends RecyclerView.Adapter<IssuesAdapter.ViewHolder
             loc.setText(curr.getLoc());
             status.setText(curr.getStatus());
             date.setText(curr.getDate());
-            info.setText(curr.getInfo());
+            info.setText(curr.getDesc());
+            pts.setText(curr.getPoints() + "");
             Glide.with(context).load(curr.getImageResource()).into(image);
         }
 
@@ -117,7 +126,7 @@ public class IssuesAdapter extends RecyclerView.Adapter<IssuesAdapter.ViewHolder
             detailIntent.putExtra("loc", curr.getLoc());
             detailIntent.putExtra("status", curr.getStatus());
             detailIntent.putExtra("date", curr.getDate());
-            detailIntent.putExtra("info", curr.getInfo());
+            detailIntent.putExtra("info", curr.getDesc());
             detailIntent.putExtra("points", curr.getPoints() + "");
             detailIntent.putExtra("image_resource", curr.getImageResource());
             context.startActivity(detailIntent);
