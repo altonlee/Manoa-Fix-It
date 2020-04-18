@@ -1,67 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/toolbarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/addToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ImageView
+        android:id="@+id/image_placeholder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbarLayout"
+        android:paddingBottom="20dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/form_image" />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/image_picker"
+        style="@style/Widget.Design.FloatingActionButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignEnd="@id/image_placeholder"
+        android:layout_alignRight="@id/image_placeholder"
+        android:layout_alignBottom="@id/image_placeholder"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:entries="@array/image_spinner"
+        android:foreground="@drawable/ic_add_photo_18dp"
+        android:foregroundGravity="center"
+        android:padding="8dp"
+        android:spinnerMode="dialog"
+        android:theme="@style/ThemeOverlay.AppCompat" />
 
     <TextView
         android:id="@+id/title_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="64dp"
-        android:layout_marginEnd="316dp"
-        android:layout_marginRight="316dp"
-        android:layout_weight="1"
-        android:text="Issue Title"
-        app:layout_constraintEnd_toEndOf="@+id/name_text"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_below="@id/image_placeholder"
+        android:padding="12dp"
+        android:text="@string/form_title"
+        android:textSize="18sp" />
 
     <EditText
-        android:id="@+id/name_text"
-        android:layout_width="275dp"
-        android:layout_height="42dp"
-        android:layout_marginTop="46dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        android:layout_weight="1"
-        android:ems="10"
-        android:hint="Enter your name"
-        android:inputType="textPersonName"
-        android:text="Name"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:id="@+id/title_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image_placeholder"
+        android:layout_marginRight="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_toEndOf="@id/title_label"
+        android:layout_toRightOf="@id/title_label"
+        android:hint="@string/form_title_hint"
+        android:inputType="text"
+        android:padding="12dp"/>
 
     <TextView
-        android:id="@+id/desc_label"
+        android:id="@+id/loc_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="104dp"
-        android:layout_marginEnd="316dp"
-        android:layout_marginRight="316dp"
-        android:layout_weight="1"
-        android:text="Description"
-        app:layout_constraintEnd_toEndOf="@+id/name_text"
-        app:layout_constraintHorizontal_bias="0.481"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_below="@id/title_label"
+        android:padding="12dp"
+        android:text="@string/form_loc"
+        android:textSize="18sp" />
 
     <EditText
-        android:id="@+id/desc_text"
-        android:layout_width="274dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="88dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        android:ems="10"
-        android:gravity="start|top"
-        android:inputType="textMultiLine"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:id="@+id/loc_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_label"
+        android:layout_toEndOf="@id/loc_label"
+        android:layout_marginRight="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_toRightOf="@id/loc_label"
+        android:hint="@string/form_loc_hint"
+        android:inputType="text"
+        android:padding="12dp" />
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/info_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/loc_label"
+        android:padding="12dp"
+        android:text="@string/form_info"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/info_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/loc_label"
+        android:layout_toEndOf="@id/info_label"
+        android:layout_toRightOf="@id/info_label"
+        android:layout_marginRight="20dp"
+        android:layout_marginEnd="20dp"
+        android:hint="@string/form_info_hint"
+        android:inputType="textMultiLine"
+        android:padding="12dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        app:srcCompat="@drawable/ic_send_32dp" />
+</RelativeLayout>
