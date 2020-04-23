@@ -32,6 +32,13 @@
         Vestibulum gravida, nunc at venenatis egestas, nisl massa varius leo, sit amet sagittis nisl quam et leo.
     </string>
 
+    <integer-array name="issue_user_id">
+        <item>55550012</item>
+        <item>99911119</item>
+        <item>55550012</item>
+        <item>55667788</item>
+    </integer-array>
+
     <string-array name="issue_titles">
         <item>Kuykendall Bathrooms</item>
         <item>POST ICSpace Printer</item>

@@ -1,6 +1,5 @@
 package com.example.manoa_fix_it;
 
-import android.content.res.TypedArray;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -11,10 +10,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
-import androidx.recyclerview.widget.RecyclerView;
+
 import android.content.Intent;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.ItemTouchHelper;
+
 import androidx.viewpager.widget.ViewPager;
 
 import android.view.View;
@@ -23,15 +21,20 @@ import android.view.MenuItem;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
+/**
+ * Main Activity for Manoa Fix-It!
+ */
 public class MainActivity extends AppCompatActivity {
+    public static final int ADD_ISSUE_ACTIVITY_REQUEST_CODE = 1;
+    public static final int EDIT_ISSUE_ACTIVITY_REQUEST_CODE = 2;
+
     private List<Issue> issueData;
     private IssuesAdapter issuesAdapter;
-    private IssueViewModel mIssueViewModel;
+    public static IssueViewModel mIssueViewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,8 +74,8 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, AddActivity.class);
-                startActivityForResult(intent, 1);
+                Intent addIntent = new Intent(MainActivity.this, AddIssueActivity.class);
+                startActivityForResult(addIntent, ADD_ISSUE_ACTIVITY_REQUEST_CODE);
             }
         });
 
@@ -115,23 +118,30 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Processes form from AddIssueActivity.
+     * Handles the newly added issues aspect of AddIssueActivity.
+     * @param requestCode: defines what AddIssueActivity should be doing
+     * @param resultCode: defines if operation is successful
+     * @param data: returned data
+     */
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        TypedArray images = getResources().obtainTypedArray(R.array.issue_images);
-        int index = data.getIntExtra("image", 0);
 
-        if (requestCode == 1 && resultCode == RESULT_OK) {
+        if (requestCode == ADD_ISSUE_ACTIVITY_REQUEST_CODE && resultCode == RESULT_OK) {
             Date date = new Date();
             SimpleDateFormat df = new SimpleDateFormat("MMM dd yyyy", Locale.US);
 
             Issue issue = new Issue(
+                    55550019, // get userID somehow
                     data.getStringExtra("title"),
                     data.getStringExtra("loc"),
-                    "Unresolved",
+                    "Pending Review",
                     df.format(date),
                     data.getStringExtra("desc"),
                     0,
-                    images.getResourceId(index, 0));
+                    getResources().obtainTypedArray(R.array.issue_images)
+                            .getResourceId(data.getIntExtra("image_resource", 0), 0));
             mIssueViewModel.insert(issue);
         }
     }

@@ -50,6 +50,7 @@ public abstract class IssueRoomDatabase extends RoomDatabase {
      */
     private static class PopulateDbAsync extends AsyncTask<Void, Void, Void> {
         private final IssueDao dao;
+        int[] userId = cont.getResources().getIntArray(R.array.issue_user_id);
         String[] titles = cont.getResources().getStringArray(R.array.issue_titles);
         String[] locs = cont.getResources().getStringArray(R.array.issue_locs);
         String[] statuses = cont.getResources().getStringArray(R.array.issue_statuses);
@@ -68,6 +69,7 @@ public abstract class IssueRoomDatabase extends RoomDatabase {
 
             for (int i = 0; i < titles.length; i++) {
                 dao.insert(new Issue(
+                        userId[i],
                         titles[i],
                         locs[i],
                         statuses[i],

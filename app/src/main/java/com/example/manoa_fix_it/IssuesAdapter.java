@@ -122,12 +122,14 @@ public class IssuesAdapter extends RecyclerView.Adapter<IssuesAdapter.ViewHolder
         public void onClick(View view) {
             Issue curr = issueData.get(getAdapterPosition());
             Intent detailIntent = new Intent(context, IssueActivity.class);
+            detailIntent.putExtra("postID", curr.getPostId());
+            detailIntent.putExtra("userID", curr.getUserId());
             detailIntent.putExtra("title", curr.getTitle());
             detailIntent.putExtra("loc", curr.getLoc());
             detailIntent.putExtra("status", curr.getStatus());
             detailIntent.putExtra("date", curr.getDate());
-            detailIntent.putExtra("info", curr.getDesc());
-            detailIntent.putExtra("points", curr.getPoints() + "");
+            detailIntent.putExtra("desc", curr.getDesc());
+            detailIntent.putExtra("points", curr.getPoints());
             detailIntent.putExtra("image_resource", curr.getImageResource());
             context.startActivity(detailIntent);
         }

@@ -45,11 +45,33 @@ public class IssueRepo {
     }
 
     /**
+     * Updates an issue by calling an AsyncTask and
+     * updating it from the Dao in the background
+     * @param issue: the issue to update
+     */
+    public void update(Issue issue) {
+        new updateAsyncTask(issueDao).execute(issue);
+    }
+    private static class updateAsyncTask extends AsyncTask<Issue, Void, Void> {
+        private IssueDao mAsyncTaskDao;
+
+        updateAsyncTask(IssueDao dao) {
+            mAsyncTaskDao = dao;
+        }
+
+        @Override
+        protected  Void doInBackground(final Issue... params) {
+            mAsyncTaskDao.update(params[0]);
+            return null;
+        }
+    }
+
+    /**
      * Deletes an issue by calling an AsyncTask and
      * deleting it from the Dao in the background
      * @param issue: the issue to delete
      */
-    public void deleteIssue (Issue issue) { new deleteAsyncTask(issueDao).execute(issue); }
+    public void delete (Issue issue) { new deleteAsyncTask(issueDao).execute(issue); }
     private static class deleteAsyncTask extends AsyncTask<Issue, Void, Void> {
         private IssueDao mAsyncTaskDao;
 
@@ -59,7 +81,7 @@ public class IssueRepo {
 
         @Override
         protected  Void doInBackground(final Issue... params) {
-            mAsyncTaskDao.deleteIssue(params[0]);
+            mAsyncTaskDao.delete(params[0]);
             return null;
         }
     }
