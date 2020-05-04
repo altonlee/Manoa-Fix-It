@@ -46,12 +46,12 @@ public class IssueActivity extends AppCompatActivity {
 
         // Initialize Views
         img = findViewById(R.id.issueImageDetail);
-        title = findViewById(R.id.titleDetail);
-        loc = findViewById(R.id.locDetail);
-        status = findViewById(R.id.statusDetail);
-        date = findViewById(R.id.dateDetail);
-        desc = findViewById(R.id.descDetail);
-        pts = findViewById(R.id.pointsDetail);
+        title = findViewById(R.id.issueTitleDetail);
+        loc = findViewById(R.id.issueLocDetail);
+        status = findViewById(R.id.issueStatusDetail);
+        date = findViewById(R.id.issueDateDetail);
+        desc = findViewById(R.id.issueDescDetail);
+        pts = findViewById(R.id.issuePointsDetail);
 
         // Set data into Intent extra
         title.setText(getIntent().getStringExtra("title"));

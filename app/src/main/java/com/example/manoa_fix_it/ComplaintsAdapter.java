@@ -7,52 +7,37 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+
 import java.util.List;
 
-public class IssuesAdapter extends RecyclerView.Adapter<IssuesAdapter.ViewHolder> {
-    // Member variables
-    private List<Issue> issueData;
+public class ComplaintsAdapter extends RecyclerView.Adapter<ComplaintsAdapter.ViewHolder> {
+    private List<Complaint> complData;
     private Context context;
 
-    /**
-     * Constructor that passes in issue data and context.
-     * @param issueData: an ArrayList containing the issues.
-     * @param context: Context of the application.
-     */
-    IssuesAdapter(Context context, List<Issue> issueData) {
-        this.issueData = issueData;
+    ComplaintsAdapter(Context context, List<Complaint> complData) {
+        this.complData = complData;
         this.context = context;
     }
 
-    /**
-     * Required method used to create viewholder objects.
-     * @param parent: ViewGroup the View will be added to
-     * @param viewType: view type of new View
-     * @return the newly created ViewHolder.
-     */
     @Override
-    public IssuesAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        return new ViewHolder(LayoutInflater.from(context).inflate(R.layout.list_issue, parent, false));
+    public ComplaintsAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        return new ViewHolder(LayoutInflater.from(context).inflate(R.layout.list_complaint, parent, false));
     }
 
-    /**
-     * Required method used to bind data to viewholder.
-     * @param holder: viewholder the data should be put into
-     * @param pos: position of adapter
-     */
     @Override
-    public void onBindViewHolder(IssuesAdapter.ViewHolder holder, int pos) {
-        // Get current issue
-        Issue curr = issueData.get(pos);
-        // populate textview with issue data
+    public void onBindViewHolder(ComplaintsAdapter.ViewHolder holder, int pos) {
+        // Get current complaint
+        Complaint curr = complData.get(pos);
+        // populate view with data
         holder.bindTo(curr);
     }
 
-    void setIssues(List<Issue> issues){
-        issueData = issues;
+    void setComplaints(List<Complaint> complaints) {
+        complData = complaints;
         notifyDataSetChanged();
     }
 
@@ -62,16 +47,14 @@ public class IssuesAdapter extends RecyclerView.Adapter<IssuesAdapter.ViewHolder
      */
     @Override
     public int getItemCount() {
-        return issueData.size();
+        return complData.size();
     }
 
     class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         // Member variables
         private TextView title;
         private TextView loc;
-        private TextView status;
         private TextView date;
-        private TextView info;
         private TextView pts;
         private ImageView image;
 
@@ -82,13 +65,11 @@ public class IssuesAdapter extends RecyclerView.Adapter<IssuesAdapter.ViewHolder
         ViewHolder(View itemView) {
             super(itemView);
             // Initialize member variables
-            title = itemView.findViewById(R.id.issueTitle);
-            loc = itemView.findViewById(R.id.issueLoc);
-            status = itemView.findViewById(R.id.issueStatus);
-            date = itemView.findViewById(R.id.issueDate);
-            info = itemView.findViewById(R.id.issueDesc);
-            pts = itemView.findViewById(R.id.issuePoints);
-            image = itemView.findViewById(R.id.issueImage);
+            title = itemView.findViewById(R.id.complaintTitle);
+            loc = itemView.findViewById(R.id.complaintLoc);
+            date = itemView.findViewById(R.id.complaintDate);
+            pts = itemView.findViewById(R.id.complaintPoints);
+            image = itemView.findViewById(R.id.complaintImage);
             // Set OnClickListener to entire view
             itemView.setOnClickListener(this);
         }
@@ -96,15 +77,13 @@ public class IssuesAdapter extends RecyclerView.Adapter<IssuesAdapter.ViewHolder
          * Method binds passed in issue data with View
          * @param curr: current Issue
          */
-        void bindTo(Issue curr) {
+        void bindTo(Complaint curr) {
             // Populate View with issue details
             title.setText(curr.getTitle());
             loc.setText(curr.getLoc());
-            status.setText(curr.getStatus());
             date.setText(curr.getDate());
-            info.setText(curr.getDesc());
             pts.setText(curr.getPoints() + "");
-            Glide.with(context).load(curr.getImageResource()).into(image);
+            Glide.with(context).load(R.drawable.img_running).into(image);
         }
 
         /**
@@ -113,17 +92,15 @@ public class IssuesAdapter extends RecyclerView.Adapter<IssuesAdapter.ViewHolder
          */
         @Override
         public void onClick(View view) {
-            Issue curr = issueData.get(getAdapterPosition());
-            Intent detailIntent = new Intent(context, IssueActivity.class);
+            Complaint curr = complData.get(getAdapterPosition());
+            Intent detailIntent = new Intent(context, ComplaintActivity.class);
             detailIntent.putExtra("postID", curr.getPostId());
             detailIntent.putExtra("userID", curr.getUserId());
             detailIntent.putExtra("title", curr.getTitle());
             detailIntent.putExtra("loc", curr.getLoc());
-            detailIntent.putExtra("status", curr.getStatus());
             detailIntent.putExtra("date", curr.getDate());
             detailIntent.putExtra("desc", curr.getDesc());
             detailIntent.putExtra("points", curr.getPoints());
-            detailIntent.putExtra("image_resource", curr.getImageResource());
             context.startActivity(detailIntent);
         }
     }

@@ -31,15 +31,13 @@ public class AddIssueActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.add_issue);
 
-        // Image header
-        ImageView img = findViewById(R.id.image_placeholder);
-        Glide.with(this).load(R.drawable.img_placeholder).into(img);
-
-        // Form input variables
+        // Form View variables
         title = findViewById(R.id.title_text);
         loc = findViewById(R.id.loc_text);
         desc = findViewById(R.id.info_text);
         image = findViewById(R.id.image_picker);
+        ImageView img = findViewById(R.id.image_placeholder);
+        Glide.with(this).load(R.drawable.img_placeholder).into(img);
 
         final Bundle extras = getIntent().getExtras();
         // if activity is passed in an issue, then we're editing

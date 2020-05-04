@@ -37,7 +37,7 @@ public class IssueFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_issue, container, false);
 
         //Initialize RecyclerView
-        recyclerView = rootView.findViewById(R.id.recyclerView);
+        recyclerView = rootView.findViewById(R.id.recyclerIssue);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
         // Initialize adapter with data

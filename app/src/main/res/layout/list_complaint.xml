@@ -11,27 +11,27 @@
         android:layout_height="wrap_content">
 
         <ImageView
-            android:id="@+id/issueImage"
+            android:id="@+id/complaintImage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true" />
 
         <TextView
-            android:id="@+id/title"
+            android:id="@+id/complaintTitle"
             style="@style/TextAppearance.AppCompat.Headline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@id/issueImage"
+            android:layout_alignBottom="@id/complaintImage"
             android:padding="8dp"
             android:text="@string/title_placeholder"
             android:theme="@style/ThemeOverlay.AppCompat.Dark" />
 
         <TextView
-            android:id="@+id/points"
+            android:id="@+id/complaintPoints"
             style="@style/TextAppearance.AppCompat.Subhead"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/issueImage"
+            android:layout_below="@id/complaintImage"
             android:paddingTop="8dp"
             android:paddingLeft="8dp"
             android:paddingBottom="8dp"
@@ -40,13 +40,13 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/list_likes_string"
+            android:id="@+id/compl_likes_string"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="@style/TextAppearance.AppCompat.Subhead"
             android:textColor="?android:textColorSecondary"
-            android:layout_below="@id/issueImage"
-            android:layout_toRightOf="@id/points"
+            android:layout_below="@id/complaintImage"
+            android:layout_toRightOf="@id/complaintPoints"
             android:paddingTop="8dp"
             android:paddingLeft="5dp"
             android:paddingStart="5dp"
@@ -56,17 +56,17 @@
             android:id="@+id/list_separator1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/issueImage"
-            android:layout_toRightOf="@id/list_likes_string"
+            android:layout_below="@id/complaintImage"
+            android:layout_toRightOf="@id/compl_likes_string"
             android:padding="8dp"
             android:text="·" />
 
         <TextView
-            android:id="@+id/date"
+            android:id="@+id/complaintDate"
             style="@style/TextAppearance.AppCompat.Subhead"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/issueImage"
+            android:layout_below="@id/complaintImage"
             android:layout_toRightOf="@id/list_separator1"
             android:paddingTop="8dp"
             android:text="@string/date_placeholder"
@@ -76,40 +76,20 @@
             android:id="@+id/list_separator2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/issueImage"
-            android:layout_toRightOf="@id/date"
+            android:layout_below="@id/complaintImage"
+            android:layout_toRightOf="@id/complaintDate"
             android:padding="8dp"
             android:text="·" />
 
         <TextView
-            android:id="@+id/loc"
+            android:id="@+id/complaintLoc"
             style="@style/TextAppearance.AppCompat.Subhead"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/issueImage"
+            android:layout_below="@id/complaintImage"
             android:layout_toRightOf="@id/list_separator2"
             android:paddingTop="8dp"
             android:text="@string/loc_placeholder"
             android:textColor="?android:textColorSecondary" />
-
-        <TextView
-            android:id="@+id/status"
-            style="@style/TextAppearance.AppCompat.Subhead"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/points"
-            android:paddingLeft="8dp"
-            android:text="@string/status_placeholder"
-            android:textColor="?android:textColorSecondary" />
-
-        <TextView
-            android:id="@+id/detail"
-            style="@style/TextAppearance.AppCompat.Subhead"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/status"
-            android:padding="8dp"
-            android:maxLines="1"
-            android:text="@string/detail_placeholder" />
     </RelativeLayout>
 </androidx.cardview.widget.CardView>
