@@ -16,7 +16,7 @@ import java.util.List;
 @Dao
 public interface IssueDao {
     // LiveData: data holder class that only holds latest version of data
-    @Query("SELECT * from issue_table ORDER BY date(date) DESC")
+    @Query("SELECT * FROM issue_table ORDER BY date DESC")
     LiveData<List<Issue>> getAllIssues();
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
@@ -30,19 +30,4 @@ public interface IssueDao {
 
     @Query("DELETE FROM issue_table")
     void deleteAll();
-
-    @Query("SELECT * from issue_table ORDER BY title ASC")
-    LiveData<List<Issue>> sortByTitleAsc();
-
-    @Query("SELECT * from issue_table ORDER BY title DESC")
-    LiveData<List<Issue>> sortByTitleDesc();
-
-    @Query("SELECT * from issue_table ORDER BY date(date) ASC")
-    LiveData<List<Issue>> sortByDateAsc();
-
-    @Query("SELECT * from issue_table ORDER BY date(date) DESC")
-    LiveData<List<Issue>> sortByDateDesc();
-
-    @Query("SELECT * from issue_table ORDER BY points DESC")
-    LiveData<List<Issue>> sortByPoints();
 }

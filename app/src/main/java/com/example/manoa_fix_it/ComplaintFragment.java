@@ -24,7 +24,7 @@ public class ComplaintFragment extends Fragment {
     private RecyclerView recyclerView;
     private List<Complaint> complaintData;
     private ComplaintsAdapter complaintAdapter;
-    private ComplaintViewModel mComplaintViewModel;
+    static ComplaintViewModel mComplaintViewModel;
 
     public ComplaintFragment() {
         // Required empty public constructor
@@ -48,7 +48,7 @@ public class ComplaintFragment extends Fragment {
 
         // Initialize IssueViewModel
         mComplaintViewModel = ViewModelProviders.of(this).get(ComplaintViewModel.class);
-        mComplaintViewModel.getAllComplaints().observe(this, new Observer<List<Complaint>>() {
+        mComplaintViewModel.getAllComplaints().observe(getViewLifecycleOwner(), new Observer<List<Complaint>>() {
             @Override
             public void onChanged(@Nullable List<Complaint> complaints) {
                 complaintAdapter.setComplaints(complaints);

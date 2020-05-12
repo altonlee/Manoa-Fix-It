@@ -11,9 +11,12 @@ import androidx.room.Update;
 import java.util.List;
 
 @Dao
+/**
+ * Data Access Object (DAO) for Complaint posts.
+ */
 public interface ComplaintDao {
     // LiveData: data holder class that only holds latest version of data
-    @Query("SELECT * from complaint_table ORDER BY date(date) DESC")
+    @Query("SELECT * FROM complaint_table ORDER BY date DESC")
     LiveData<List<Complaint>> getAllComplaints();
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)

@@ -5,11 +5,11 @@ import android.os.Bundle;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
 
-import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.core.view.GravityCompat;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
 
@@ -20,7 +20,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
@@ -31,10 +30,9 @@ import java.util.Locale;
 public class MainActivity extends AppCompatActivity {
     public static final int ADD_ISSUE_ACTIVITY_REQUEST_CODE = 1;
     public static final int EDIT_ISSUE_ACTIVITY_REQUEST_CODE = 2;
-
-    private List<Issue> issueData;
-    private IssuesAdapter issuesAdapter;
-    public static IssueViewModel mIssueViewModel;
+    public static final int ADD_COMPL_ACTIVITY_REQUEST_CODE = 3;
+    public static final int EDIT_COMPL_ACTIVITY_REQUEST_CODE = 4;
+    public static final int LOGIN_ID = R.integer.userid;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,9 +42,13 @@ public class MainActivity extends AppCompatActivity {
         // Initialize toolbar
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        toggle.syncState();
 
         // Toolbar tabs
-        TabLayout tabLayout = findViewById(R.id.tab_layout);
+        final TabLayout tabLayout = findViewById(R.id.tab_layout);
         tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_issues));
         tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_complaints));
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
@@ -61,10 +63,8 @@ public class MainActivity extends AppCompatActivity {
             public void onTabSelected(TabLayout.Tab tab) {
                 viewPager.setCurrentItem(tab.getPosition());
             }
-
             @Override
             public void onTabUnselected(TabLayout.Tab tab) { }
-
             @Override
             public void onTabReselected(TabLayout.Tab tab) { }
         });
@@ -74,26 +74,19 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent addIntent = new Intent(MainActivity.this, AddIssueActivity.class);
-                startActivityForResult(addIntent, ADD_ISSUE_ACTIVITY_REQUEST_CODE);
-            }
-        });
-
-        // Initialize adapter with data
-        issueData = new ArrayList<Issue>();
-        issuesAdapter = new IssuesAdapter(this, issueData);
-
-        // Initialize IssueViewModel
-        mIssueViewModel = ViewModelProviders.of(this).get(IssueViewModel.class);
-        mIssueViewModel.getAllIssues().observe(this, new Observer<List<Issue>>() {
-            @Override
-            public void onChanged(@Nullable List<Issue> issues) {
-                issuesAdapter.setIssues(issues);
+                if (tabLayout.getSelectedTabPosition() == 0) {
+                    Intent addIntent = new Intent(MainActivity.this, IssueAddActivity.class);
+                    startActivityForResult(addIntent, ADD_ISSUE_ACTIVITY_REQUEST_CODE);
+                } else if (tabLayout.getSelectedTabPosition() == 1) {
+                    Intent addIntent = new Intent(MainActivity.this, ComplAddActivity.class);
+                    startActivityForResult(addIntent, ADD_COMPL_ACTIVITY_REQUEST_CODE);
+                }
             }
         });
     }
 
     @Override
+    // Initializes menu options
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
@@ -101,48 +94,60 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
+    // Handles appbar item selections
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         switch (item.getItemId()) {
             case R.id.action_sort:
-                // get sort options
-                return true;
-            case R.id.action_settings:
-                // show app settings UI
                 return true;
             default:
                 // action not recognized
                 return super.onOptionsItemSelected(item);
         }
     }
+    @Override
+    // Handles slider menu toggling
+    public void onBackPressed() {
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
+        } else {
+            super.onBackPressed();
+        }
+    }
 
     /**
-     * Processes form from AddIssueActivity.
-     * Handles the newly added issues aspect of AddIssueActivity.
-     * @param requestCode: defines what AddIssueActivity should be doing
+     * Handles the newly added posts of IssueAddActivity and ComplAddActivity.
+     * @param requestCode: defines what the activity should be doing
      * @param resultCode: defines if operation is successful
      * @param data: returned data
      */
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-
         if (requestCode == ADD_ISSUE_ACTIVITY_REQUEST_CODE && resultCode == RESULT_OK) {
-            Date date = new Date();
-            SimpleDateFormat df = new SimpleDateFormat("MMM dd yyyy", Locale.US);
-
             Issue issue = new Issue(
-                    55550019, // get userID somehow
+                    LOGIN_ID,
                     data.getStringExtra("title"),
                     data.getStringExtra("loc"),
                     "Pending Review",
-                    df.format(date),
+                    System.currentTimeMillis(),
                     data.getStringExtra("desc"),
                     0,
                     getResources().obtainTypedArray(R.array.issue_images)
                             .getResourceId(data.getIntExtra("image_resource", 0), 0));
-            mIssueViewModel.insert(issue);
+            IssueFragment.mIssueViewModel.insert(issue);
+        } else if (requestCode == ADD_COMPL_ACTIVITY_REQUEST_CODE && resultCode == RESULT_OK) {
+            Complaint curr = new Complaint(
+                    LOGIN_ID,
+                    data.getStringExtra("title"),
+                    data.getStringExtra("loc"),
+                    System.currentTimeMillis(),
+                    data.getStringExtra("desc"),
+                    0
+            );
+            ComplaintFragment.mComplaintViewModel.insert(curr);
         }
     }
 }

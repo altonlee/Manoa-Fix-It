@@ -19,98 +19,137 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <ScrollView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/toolbarLayout">
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbarLayout"
+        tools:context=".ComplaintActivity"
+        android:paddingBottom="16dp">
 
-        <RelativeLayout
+        <TextView
+            android:id="@+id/complaintTitleDetail"
+            style="@style/TextAppearance.AppCompat.Headline"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:context=".ComplaintActivity">
+            android:paddingTop="16dp"
+            android:paddingLeft="16dp"
+            android:paddingBottom="8dp"
+            android:text="@string/title_placeholder" />
 
-            <ImageView
-                android:id="@+id/complaintImageDetail"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:adjustViewBounds="true"/>
+        <TextView
+            android:id="@+id/complaint_by_string"
+            style="@style/TextAppearance.AppCompat.Subhead"
+            android:textColor="?android:textColorSecondary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/complaintTitleDetail"
+            android:paddingLeft="16dp"
+            android:text="By " />
 
-            <TextView
-                android:id="@+id/complaintTitleDetail"
-                style="@style/TextAppearance.AppCompat.Headline"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="16dp"
-                android:text="@string/title_placeholder" />
+        <TextView
+            android:id="@+id/complaint_userID"
+            style="@style/TextAppearance.AppCompat.Subhead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/complaintTitleDetail"
+            android:layout_toRightOf="@id/complaint_by_string"
+            android:paddingLeft="4dp"
+            android:text="@string/app_name" />
 
-            <TextView
-                android:id="@+id/complaintPointsDetail"
-                style="@style/TextAppearance.AppCompat.Subhead"
-                android:textColor="?android:textColorSecondary"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/complaintTitleDetail"
-                android:paddingStart="16dp"
-                android:paddingLeft="16dp"
-                android:paddingTop="16dp"
-                android:text="42069"
-                android:textStyle="bold" />
+        <TextView
+            android:id="@+id/complaintPointsDetail"
+            style="@style/TextAppearance.AppCompat.Subhead"
+            android:textColor="?android:textColorSecondary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/complaint_userID"
+            android:paddingStart="16dp"
+            android:paddingLeft="16dp"
+            android:paddingTop="12dp"
+            android:text="42069"
+            android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/complaint_likes_string"
-                style="@style/TextAppearance.AppCompat.Subhead"
-                android:textColor="?android:textColorSecondary"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/complaintTitleDetail"
-                android:layout_toRightOf="@id/complaintPointsDetail"
-                android:paddingTop="16dp"
-                android:paddingLeft="5dp"
-                android:text="Likes" />
+        <TextView
+            android:id="@+id/complaint_likes_string"
+            style="@style/TextAppearance.AppCompat.Subhead"
+            android:textColor="?android:textColorSecondary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/complaint_userID"
+            android:layout_toRightOf="@id/complaintPointsDetail"
+            android:paddingTop="12dp"
+            android:paddingLeft="5dp"
+            android:text="Likes" />
 
-            <TextView
-                android:id="@+id/separator1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/complaintTitleDetail"
-                android:layout_toRightOf="@id/complaint_likes_string"
-                android:paddingTop="16dp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:text="·" />
+        <TextView
+            android:id="@+id/separator1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/complaint_userID"
+            android:layout_toRightOf="@id/complaint_likes_string"
+            android:paddingTop="12dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="·" />
 
-            <TextView
-                android:id="@+id/complaintDateDetail"
-                style="@style/TextAppearance.AppCompat.Subhead"
-                android:textColor="?android:textColorSecondary"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/complaintTitleDetail"
-                android:layout_toRightOf="@id/separator1"
-                android:paddingTop="16dp"
-                android:text="@string/date_placeholder" />
+        <TextView
+            android:id="@+id/complaintDateDetail"
+            style="@style/TextAppearance.AppCompat.Subhead"
+            android:textColor="?android:textColorSecondary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/complaint_userID"
+            android:layout_toRightOf="@id/separator1"
+            android:paddingTop="12dp"
+            android:text="@string/date_placeholder" />
 
-            <TextView
-                android:id="@+id/separator2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/complaintTitleDetail"
-                android:layout_toRightOf="@id/complaintDateDetail"
-                android:paddingTop="16dp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:text="·" />
+        <TextView
+            android:id="@+id/separator2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/complaint_userID"
+            android:layout_toRightOf="@id/complaintDateDetail"
+            android:paddingTop="12dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="·" />
 
-            <TextView
-                android:id="@+id/complaintLocDetail"
-                style="@style/TextAppearance.AppCompat.Subhead"
-                android:textColor="?android:textColorSecondary"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/complaintTitleDetail"
-                android:layout_toRightOf="@id/separator2"
-                android:paddingTop="16dp"
-                android:text="@string/loc_placeholder"/>
-        </RelativeLayout>
-    </ScrollView>
+        <TextView
+            android:id="@+id/complaintLocDetail"
+            style="@style/TextAppearance.AppCompat.Subhead"
+            android:textColor="?android:textColorSecondary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/complaint_userID"
+            android:layout_toRightOf="@id/separator2"
+            android:paddingTop="12dp"
+            android:text="@string/loc_placeholder"/>
+
+        <TextView
+            android:id="@+id/complaint_op"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/complaintPointsDetail"
+            android:padding="16dp"
+            android:text="@string/detail_placeholder"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/complaint_op">
+
+        </ScrollView>
+
+        <EditText
+            android:id="@+id/compl_add_comment_text"
+            android:layout_width="135pt"
+            android:layout_height="wrap_content"
+            android:hint="Add a Comment"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd="16dp" />
+    </RelativeLayout>
 </RelativeLayout>

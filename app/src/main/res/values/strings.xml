@@ -31,10 +31,18 @@
         \n
         Vestibulum gravida, nunc at venenatis egestas, nisl massa varius leo, sit amet sagittis nisl quam et leo.
     </string>
+    <string name="navigation_drawer_open">a</string>
+    <string name="navigation_drawer_close">b</string>
+    <!-- Slider Menu options -->
+    <string name="home">Home</string>
+    <string name="your_posts">Your Posts</string>
+    <string name="likes">Likes</string>
+    <integer name="userid">22999999</integer>
+    <string name="email">example@hawaii.edu</string>
 
     <integer-array name="issue_user_id">
         <item>55550012</item>
-        <item>99911119</item>
+        <item>22999999</item>
         <item>55550012</item>
         <item>55667788</item>
     </integer-array>
@@ -61,10 +69,10 @@
     </string-array>
 
     <string-array name="issue_dates">
-        <item>Jul 8 2017</item>
-        <item>Aug 20 2018</item>
-        <item>Dec 26 2019</item>
-        <item>Jan 5 2020</item>
+        <item>1467972000000</item>
+        <item>1566295200000</item>
+        <item>1577354400000</item>
+        <item>1578218400000</item>
     </string-array>
 
     <string-array name="issue_info">
@@ -82,6 +90,18 @@
         <item>42</item>
         <item>69</item>
     </integer-array>
+
+    <string-array name="compl_titles">
+        <item>Vending Machines</item>
+        <item>Drinks???</item>
+    </string-array>
+
+    <string-array name="compl_info">
+        <item>Poptarts in the vending machines are too overpriced!\n\n
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non aliquet augue, faucibus tincidunt ligula. </item>
+        <item>Why are there only two flavors of Monster in da whole building lol\n\n
+            Vestibulum gravida, nunc at venenatis egestas, nisl massa varius leo, sit amet sagittis nisl quam et leo.</item>
+    </string-array>
 
     <string-array name="issue_images">
         <item>@drawable/img_baseball</item>

@@ -104,20 +104,7 @@ public class IssueRepo {
         @Override
         protected Void doInBackground(Void... voids) {
             switch (sortMethod) {
-                case "TitleAsc":
-                    mAsyncTaskDao.sortByTitleAsc();
-                    break;
-                case "TitleDesc":
-                    mAsyncTaskDao.sortByTitleDesc();
-                    break;
                 case "DateAsc":
-                    mAsyncTaskDao.sortByDateAsc();
-                    break;
-                case "DateDesc":
-                    mAsyncTaskDao.sortByDateDesc();
-                    break;
-                case "Points":
-                    mAsyncTaskDao.sortByPoints();
                     break;
                 default:
                     // unknown option

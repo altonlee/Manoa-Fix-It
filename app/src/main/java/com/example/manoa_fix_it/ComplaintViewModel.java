@@ -21,4 +21,6 @@ public class ComplaintViewModel extends AndroidViewModel {
     LiveData<List<Complaint>> getAllComplaints() { return allComplaints; }
 
     public void insert(Complaint complaint) { mRepository.insert(complaint); }
+    public void update(Complaint complaint) { mRepository.update(complaint); }
+    public void delete(Complaint complaint) { mRepository.delete(complaint); }
 }

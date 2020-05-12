@@ -23,7 +23,9 @@
             android:parentActivityName=".MainActivity"/>
         <activity android:name=".ComplaintActivity"
             android:parentActivityName=".MainActivity"/>
-        <activity android:name=".AddIssueActivity"
+        <activity android:name=".IssueAddActivity"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".ComplAddActivity"
             android:parentActivityName=".MainActivity"/>
     </application>
 

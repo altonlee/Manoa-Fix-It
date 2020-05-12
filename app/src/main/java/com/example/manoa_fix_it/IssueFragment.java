@@ -24,7 +24,7 @@ public class IssueFragment extends Fragment {
     private RecyclerView recyclerView;
     private List<Issue> issueData;
     private IssuesAdapter issuesAdapter;
-    private IssueViewModel mIssueViewModel;
+    static IssueViewModel mIssueViewModel;
 
     public IssueFragment() {
         // Required empty public constructor
@@ -47,7 +47,7 @@ public class IssueFragment extends Fragment {
 
         // Initialize IssueViewModel
         mIssueViewModel = ViewModelProviders.of(this).get(IssueViewModel.class);
-        mIssueViewModel.getAllIssues().observe(this, new Observer<List<Issue>>() {
+        mIssueViewModel.getAllIssues().observe(getViewLifecycleOwner(), new Observer<List<Issue>>() {
             @Override
             public void onChanged(@Nullable List<Issue> issues) {
                 issuesAdapter.setIssues(issues);

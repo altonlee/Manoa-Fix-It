@@ -20,7 +20,7 @@ public class Issue {
     @ColumnInfo(name = "status")
     private String status;
     @ColumnInfo(name = "date")
-    private String date;
+    private long date;
     @ColumnInfo(name = "desc")
     private String desc;
     @ColumnInfo(name = "points")
@@ -39,7 +39,7 @@ public class Issue {
      * @param points: number of likes received
      * @param imageResource: image of issue
      */
-    public Issue(int userId, String title, String loc, String status, String date, String desc, int points, int imageResource) {
+    public Issue(int userId, String title, String loc, String status, long date, String desc, int points, int imageResource) {
         this.userId = userId;
         this.title = title;
         this.loc = loc;
@@ -64,7 +64,7 @@ public class Issue {
      * @param imageResource: image of issue
      */
     @Ignore
-    public Issue(int postId, int userId, String title, String loc, String status, String date, String desc, int points, int imageResource) {
+    public Issue(int postId, int userId, String title, String loc, String status, long date, String desc, int points, int imageResource) {
         this.postId = postId;
         this.userId = userId;
         this.title = title;
@@ -123,7 +123,7 @@ public class Issue {
      * Gets issue date.
      * @return issue details.
      */
-    String getDate() {
+    long getDate() {
         return date;
     }
     /**

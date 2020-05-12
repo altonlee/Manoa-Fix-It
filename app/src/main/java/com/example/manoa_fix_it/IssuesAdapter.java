@@ -10,6 +10,9 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 public class IssuesAdapter extends RecyclerView.Adapter<IssuesAdapter.ViewHolder> {
@@ -97,11 +100,15 @@ public class IssuesAdapter extends RecyclerView.Adapter<IssuesAdapter.ViewHolder
          * @param curr: current Issue
          */
         void bindTo(Issue curr) {
+            // Format date
+            SimpleDateFormat df = new SimpleDateFormat("MMM dd yyyy");
+            Date res = new Date(curr.getDate());
+
             // Populate View with issue details
             title.setText(curr.getTitle());
             loc.setText(curr.getLoc());
             status.setText(curr.getStatus());
-            date.setText(curr.getDate());
+            date.setText(df.format(res));
             info.setText(curr.getDesc());
             pts.setText(curr.getPoints() + "");
             Glide.with(context).load(curr.getImageResource()).into(image);

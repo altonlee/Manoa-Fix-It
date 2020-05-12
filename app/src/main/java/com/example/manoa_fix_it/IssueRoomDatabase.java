@@ -73,7 +73,7 @@ public abstract class IssueRoomDatabase extends RoomDatabase {
                         titles[i],
                         locs[i],
                         statuses[i],
-                        dates[i],
+                        Long.parseLong(dates[i]),
                         descs[i],
                         pts[i],
                         images.getResourceId(i, 0)

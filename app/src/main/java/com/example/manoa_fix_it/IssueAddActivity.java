@@ -19,7 +19,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 /**
  * Handles adding new issues and updating old issues.
  */
-public class AddIssueActivity extends AppCompatActivity {
+public class IssueAddActivity extends AppCompatActivity {
     private EditText title;
     private EditText loc;
     private EditText desc;
@@ -32,11 +32,11 @@ public class AddIssueActivity extends AppCompatActivity {
         setContentView(R.layout.add_issue);
 
         // Form View variables
-        title = findViewById(R.id.title_text);
-        loc = findViewById(R.id.loc_text);
-        desc = findViewById(R.id.info_text);
-        image = findViewById(R.id.image_picker);
-        ImageView img = findViewById(R.id.image_placeholder);
+        title = findViewById(R.id.issue_title_text);
+        loc = findViewById(R.id.issue_loc_text);
+        desc = findViewById(R.id.issue_info_text);
+        image = findViewById(R.id.issue_image_picker);
+        ImageView img = findViewById(R.id.issue_image_placeholder);
         Glide.with(this).load(R.drawable.img_placeholder).into(img);
 
         final Bundle extras = getIntent().getExtras();
@@ -45,7 +45,7 @@ public class AddIssueActivity extends AppCompatActivity {
             int id = extras.getInt("postID", -1);
             if (id != -1) {
                 // Editing Toolbar
-                Toolbar toolbar = findViewById(R.id.addToolbar);
+                Toolbar toolbar = findViewById(R.id.issue_addToolbar);
                 toolbar.setTitle("Editing Issue");
                 setSupportActionBar(toolbar);
                 ActionBar ab = getSupportActionBar();
@@ -58,7 +58,7 @@ public class AddIssueActivity extends AppCompatActivity {
         // else, we are adding an issue
         } else {
             // Adding Toolbar
-            Toolbar toolbar = findViewById(R.id.addToolbar);
+            Toolbar toolbar = findViewById(R.id.issue_addToolbar);
             toolbar.setTitle("Adding Issue");
             setSupportActionBar(toolbar);
             ActionBar ab = getSupportActionBar();
@@ -66,7 +66,7 @@ public class AddIssueActivity extends AppCompatActivity {
         }
 
         // Initialize Submit button
-        final FloatingActionButton button = findViewById(R.id.submit);
+        final FloatingActionButton button = findViewById(R.id.issue_submit);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent replyIntent = new Intent();

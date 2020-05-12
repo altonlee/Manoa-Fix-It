@@ -1,7 +1,6 @@
 package com.example.manoa_fix_it;
 
 import android.content.Intent;
-import android.content.res.TypedArray;
 import android.os.Bundle;
 
 import androidx.appcompat.app.ActionBar;
@@ -19,7 +18,6 @@ import com.bumptech.glide.Glide;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Locale;
 
 public class IssueActivity extends AppCompatActivity {
     private Issue curr;
@@ -57,7 +55,11 @@ public class IssueActivity extends AppCompatActivity {
         title.setText(getIntent().getStringExtra("title"));
         loc.setText(getIntent().getStringExtra("loc"));
         status.setText(getIntent().getStringExtra("status"));
-        date.setText(getIntent().getStringExtra("date"));
+
+        // Format date
+        SimpleDateFormat df = new SimpleDateFormat("MMM dd yyyy");
+        Date res = new Date(getIntent().getLongExtra("date", -1));
+        date.setText(df.format(res));
         desc.setText(getIntent().getStringExtra("desc"));
         pts.setText(getIntent().getIntExtra("points", 0) + "");
         Glide.with(this).load(getIntent().getIntExtra("image_resource", 0)).into(img);
@@ -69,7 +71,7 @@ public class IssueActivity extends AppCompatActivity {
                 getIntent().getStringExtra("title"),
                 getIntent().getStringExtra("loc"),
                 getIntent().getStringExtra("status"),
-                getIntent().getStringExtra("date"),
+                getIntent().getLongExtra("date", -1),
                 getIntent().getStringExtra("desc"),
                 getIntent().getIntExtra("points", -1),
                 getIntent().getIntExtra("image_resource", 0));
@@ -78,7 +80,11 @@ public class IssueActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_issue_details, menu);
+        if (getIntent().getIntExtra("userID", -1) == MainActivity.LOGIN_ID) {
+            getMenuInflater().inflate(R.menu.menu_issue_edit, menu);
+        } else {
+            getMenuInflater().inflate(R.menu.menu_issue_details, menu);
+        }
         return true;
     }
 
@@ -98,8 +104,8 @@ public class IssueActivity extends AppCompatActivity {
                 return true;
             // if editing...
             case R.id.issue_edit:
-                Intent editIntent = new Intent(IssueActivity.this, AddIssueActivity.class);
-                // pass in to-be-edited issue's data to AddIssueActivity
+                Intent editIntent = new Intent(IssueActivity.this, IssueAddActivity.class);
+                // pass in to-be-edited issue's data to IssueAddActivity
                 editIntent.putExtras(getIntent().getExtras());
                 startActivityForResult(editIntent, MainActivity.EDIT_ISSUE_ACTIVITY_REQUEST_CODE);
                 return true;
@@ -110,9 +116,9 @@ public class IssueActivity extends AppCompatActivity {
     }
 
     /**
-     * Processes form from AddIssueActivity.
-     * Handles the updating issues aspect of AddIssueActivity.
-     * @param requestCode: defines what AddIssueActivity should be doing
+     * Processes form from IssueAddActivity.
+     * Handles the updating issues aspect of IssueAddActivity.
+     * @param requestCode: defines what IssueAddActivity should be doing
      * @param resultCode: defines if operation is successful
      * @param data: returned data
      */
@@ -127,18 +133,17 @@ public class IssueActivity extends AppCompatActivity {
                     data.getStringExtra("title"),
                     data.getStringExtra("loc"),
                     data.getStringExtra("status"),
-                    data.getStringExtra("date"),
+                    getIntent().getLongExtra("date", -1),
                     data.getStringExtra("desc"),
                     data.getIntExtra("points", -1),
                     getResources().obtainTypedArray(R.array.issue_images)
                             .getResourceId(data.getIntExtra("image_resource", 0), 0));
-            MainActivity.mIssueViewModel.update(curr);
+            IssueFragment.mIssueViewModel.update(curr);
 
             // Update IssueActivity Views
              title.setText(data.getStringExtra("title"));
              loc.setText(data.getStringExtra("loc"));
              status.setText(data.getStringExtra("status"));
-             date.setText(data.getStringExtra("date"));
              desc.setText(data.getStringExtra("desc"));
              pts.setText(data.getIntExtra("points", 0) + "");
              Glide.with(this).load(getResources().obtainTypedArray(R.array.issue_images)

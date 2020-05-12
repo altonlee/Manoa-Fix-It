@@ -47,6 +47,12 @@ public abstract class ComplRoomDatabase extends RoomDatabase {
          */
         private static class PopulateDbAsync extends AsyncTask<Void, Void, Void> {
             private final ComplaintDao dao;
+            int[] userId = cont.getResources().getIntArray(R.array.issue_user_id);
+            String[] titles = cont.getResources().getStringArray(R.array.compl_titles);
+            String[] locs = cont.getResources().getStringArray(R.array.issue_locs);
+            String[] dates = cont.getResources().getStringArray(R.array.issue_dates);
+            String[] descs = cont.getResources().getStringArray(R.array.compl_info);
+            int[] pts = cont.getResources().getIntArray(R.array.issue_points);
             PopulateDbAsync(ComplRoomDatabase db) {
                 dao = db.complaintDao();
             }
@@ -55,14 +61,14 @@ public abstract class ComplRoomDatabase extends RoomDatabase {
             protected Void doInBackground(final Void... params) {
                 dao.deleteAll();
 
-                for (int i = 0; i < 1; i++) {
+                for (int i = 0; i < 2; i++) {
                     dao.insert(new Complaint(
-                            0,
-                            "title",
-                            "location",
-                            "date",
-                            "description",
-                            12
+                            userId[i + 1],
+                            titles[i],
+                            locs[i],
+                            Long.parseLong(dates[i + 2]),
+                            descs[i],
+                            pts[i + 1]
                     ));
                 }
                 return null;

@@ -12,6 +12,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 public class ComplaintsAdapter extends RecyclerView.Adapter<ComplaintsAdapter.ViewHolder> {
@@ -78,12 +80,16 @@ public class ComplaintsAdapter extends RecyclerView.Adapter<ComplaintsAdapter.Vi
          * @param curr: current Issue
          */
         void bindTo(Complaint curr) {
+            // Format date
+            SimpleDateFormat df = new SimpleDateFormat("MMM dd yyyy");
+            Date res = new Date(curr.getDate());
+
             // Populate View with issue details
             title.setText(curr.getTitle());
             loc.setText(curr.getLoc());
-            date.setText(curr.getDate());
+            date.setText(df.format(res));
             pts.setText(curr.getPoints() + "");
-            Glide.with(context).load(R.drawable.img_running).into(image);
+            Glide.with(context).load(R.drawable.img_complaint).into(image);
         }
 
         /**

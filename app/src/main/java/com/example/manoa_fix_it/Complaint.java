@@ -17,13 +17,13 @@ public class Complaint {
     @ColumnInfo(name = "loc")
     private String loc;
     @ColumnInfo(name = "date")
-    private String date;
+    private long date;
     @ColumnInfo(name = "desc")
     private String desc;
     @ColumnInfo(name = "points")
     private int points;
 
-    public Complaint(int userId, String title, String loc, String date, String desc, int points) {
+    public Complaint(int userId, String title, String loc, long date, String desc, int points) {
         this.userId = userId;
         this.title = title;
         this.loc = loc;
@@ -33,7 +33,7 @@ public class Complaint {
         //this.discussion = discussion;
     }
     @Ignore
-    public Complaint(int postId, int userId, String title, String loc, String date, String desc, int points) {
+    public Complaint(int postId, int userId, String title, String loc, long date, String desc, int points) {
         this.postId = postId;
         this.userId = userId;
         this.title = title;
@@ -83,7 +83,7 @@ public class Complaint {
      * Gets issue date.
      * @return issue details.
      */
-    String getDate() {
+    long getDate() {
         return date;
     }
     /**
